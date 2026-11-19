@@ -3,7 +3,6 @@ import type { Locale } from './channel'
 type L<T = string> = Record<Locale, T>
 
 /** Screenshots of client projects (hosted on the previous portfolio until they are copied here). */
-const OLD = 'https://yaman-mando.hatchable.site/img'
 
 export const PERSON = {
   name: { ar: 'يمان مندو', en: 'Yaman Mando', tr: 'Yaman Mando' } as L,
@@ -62,7 +61,7 @@ export const PROJECTS: Project[] = [
     tags: ['Vue.js', 'Nuxt.js', 'TypeScript', 'Firebase', 'Azure', 'GitHub Actions'],
     url: 'https://ekhtibarat.com',
     urlLabel: 'ekhtibarat.com',
-    image: `${OLD}/ekh-desktop.png`,
+    image: '/img/ekhtibarat.webp',
     imageAlt: 'Ekhtibarat',
     points: {
       ar: [
@@ -97,7 +96,7 @@ export const PROJECTS: Project[] = [
     tags: ['Vue.js', 'Nuxt.js', 'TypeScript', 'Ionic', 'REST APIs'],
     url: 'https://www.muktamel.com',
     urlLabel: 'muktamel.com',
-    image: `${OLD}/muk-desktop.png`,
+    image: '/img/muktamel.webp',
     imageAlt: 'Muktamel',
     points: {
       ar: [
@@ -216,6 +215,6 @@ export const EDUCATION: { title: L, school: L, year: string }[] = [
 
 export const LANGUAGES: { name: L, level: L }[] = [
   { name: { ar: 'العربية', en: 'Arabic', tr: 'Arapça' }, level: { ar: 'اللغة الأم', en: 'Native', tr: 'Ana dil' } },
-  { name: { ar: 'الإنجليزية', en: 'English', tr: 'İngilizce' }, level: { ar: 'مستوى متوسط', en: 'Intermediate', tr: 'Orta seviye' } },
-  { name: { ar: 'التركية', en: 'Turkish', tr: 'Türkçe' }, level: { ar: 'مستوى متوسط', en: 'Intermediate', tr: 'Orta seviye' } },
+  { name: { ar: 'الإنجليزية', en: 'English', tr: 'İngilizce' }, level: { ar: 'إتقان مهني', en: 'Professional working', tr: 'Profesyonel çalışma düzeyi' } },
+  { name: { ar: 'التركية', en: 'Turkish', tr: 'Türkçe' }, level: { ar: 'إتقان مهني', en: 'Professional working', tr: 'Profesyonel çalışma düzeyi' } },
 ]
