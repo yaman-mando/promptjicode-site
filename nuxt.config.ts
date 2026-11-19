@@ -29,6 +29,8 @@ export default defineNuxtConfig({
 
   // Fully static: every page is pre-rendered at build time
   nitro: {
+    // Always a plain static build, even inside Cloudflare's CI (which would otherwise pick a server preset)
+    preset: 'static',
     prerender: {
       crawlLinks: true,
       routes: ['/', '/yaman', '/en', '/en/yaman', '/tr', '/tr/yaman'],
