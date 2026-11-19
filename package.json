@@ -1,0 +1,27 @@
+{
+  "name": "promptjicode-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "npm run generate && wrangler dev",
+    "deploy": "npm run generate && wrangler deploy",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@fontsource/cairo": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/plus-jakarta-sans": "^5.3.0",
+    "@nuxtjs/i18n": "^10.6.0",
+    "nuxt": "^4.6.4",
+    "vue": "^3.5.45",
+    "vue-router": "^5.5.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.165.0"
+  }
+}

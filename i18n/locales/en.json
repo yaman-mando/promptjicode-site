@@ -1,0 +1,66 @@
+{
+  "channel": {
+    "title": "PromptjiCode · Write it right… get it right",
+    "metaDesc": "An Arabic channel that tests AI prompts through a developer’s eyes: weak prompt vs careful prompt, then we open the code and explain it.",
+    "nav": {
+      "series": "Series",
+      "episodes": "Episodes",
+      "tools": "Tools",
+      "about": "About"
+    },
+    "follow": "Follow the channel",
+    "github": "All prompts and code on GitHub",
+    "seriesKicker": "What we post",
+    "seriesTitle": "Series",
+    "episodesKicker": "Try it yourself",
+    "episodesTitle": "Every episode has a live page",
+    "reelsTab": "Reels",
+    "interviewTab": "Interview questions",
+    "try": "Try",
+    "allOnGithub": "The prompt and code for every episode are on GitHub",
+    "toolsKicker": "Tools",
+    "toolsTitle": "PromptjiCode Interview",
+    "toolsDesc": "Test yourself with real frontend interview questions at three levels and in three languages, and see how you compare. Every answer comes with an explanation.",
+    "toolsStat1": "questions",
+    "toolsStat2": "levels",
+    "toolsStat3": "languages",
+    "toolsCta": "Start the test",
+    "aboutKicker": "Who’s behind it",
+    "aboutTitle": "I’m Yaman",
+    "aboutText": "A frontend developer working with Vue.js and Nuxt.js. Here I share what I learn about prompts and code, in a simple way for developers and non-developers alike, and we learn together.",
+    "aboutCta": "My personal page",
+    "footer": "Write it right… get it right"
+  },
+  "portfolio": {
+    "title": "Yaman Mando · Senior Frontend Developer",
+    "metaDesc": "Yaman Mando, Senior Frontend Developer (Vue.js, Nuxt.js, TypeScript).",
+    "nav": {
+      "work": "Work",
+      "skills": "Skills",
+      "exp": "Experience",
+      "contact": "Contact"
+    },
+    "cta": {
+      "contact": "Get in touch",
+      "work": "View my work"
+    },
+    "aboutK": "About",
+    "workK": "Selected work",
+    "workH": "Products I’ve shipped",
+    "visit": "Visit site",
+    "zoom": "Enlarge image",
+    "skillsK": "Toolkit",
+    "skillsH": "Skills",
+    "expK": "Experience",
+    "expH": "Career",
+    "eduK": "Education",
+    "langK": "Languages",
+    "cK": "Contact",
+    "cH": "Let’s work on your next project.",
+    "cP": "Available for remote frontend roles and freelance projects.",
+    "copied": "Copied",
+    "tapToCopy": "Click the email or number to copy it",
+    "channel": "PromptjiCode channel",
+    "channelText": "I share what I learn about prompts and code on an Arabic educational channel."
+  }
+}

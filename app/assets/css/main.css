@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import "@fontsource/cairo/400.css";
+@import "@fontsource/cairo/600.css";
+@import "@fontsource/cairo/700.css";
+@import "@fontsource/cairo/800.css";
+@import "@fontsource/plus-jakarta-sans/400.css";
+@import "@fontsource/plus-jakarta-sans/600.css";
+@import "@fontsource/plus-jakarta-sans/700.css";
+@import "@fontsource/plus-jakarta-sans/800.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/700.css";
+
+@theme {
+  --color-ink: #120c09;
+  --color-ink-2: #1c130d;
+  --color-caramel: #e2a15c;
+  --color-caramel-dark: #b8762f;
+  --color-cream: #fbf1e4;
+  --color-sand: #b9a593;
+  --color-paper: #ffffff;
+  --color-paper-2: #faf7f3;
+  --color-text: #1d1611;
+  --color-muted: #6f6257;
+  --color-line: #ece6df;
+  --font-sans: "Cairo", system-ui, sans-serif;
+  --font-latin: "Plus Jakarta Sans", "Cairo", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+html[lang="en"], html[lang="tr"] { font-family: var(--font-latin); }
+html[lang="ar"] { font-family: var(--font-sans); }
+
+.ltr { direction: ltr; unicode-bidi: isolate; }
+.font-mono, code, pre { font-variant-ligatures: none; }
+
+:focus-visible { outline: 3px solid var(--color-caramel); outline-offset: 3px; border-radius: 8px; }
+section[id] { scroll-margin-top: 80px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
