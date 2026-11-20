@@ -141,7 +141,7 @@ useSeoMeta({
             </a>
           </div>
           <dl class="grid grid-cols-3 gap-3 text-center md:grid-cols-1">
-            <div v-for="st in [{ v: '150', l: t('channel.toolsStat1') }, { v: '3', l: t('channel.toolsStat2') }, { v: '3', l: t('channel.toolsStat3') }]" :key="st.l" class="rounded-2xl bg-ink/60 px-5 py-3">
+            <div v-for="st in [{ v: '10', l: t('channel.toolsStat1') }, { v: '3', l: t('channel.toolsStat2') }, { v: '3', l: t('channel.toolsStat3') }]" :key="st.l" class="rounded-2xl bg-ink/60 px-5 py-3">
               <dt class="sr-only">{{ st.l }}</dt>
               <dd><span class="block font-mono text-3xl font-bold text-caramel">{{ st.v }}</span><span class="text-sm text-sand">{{ st.l }}</span></dd>
             </div>
