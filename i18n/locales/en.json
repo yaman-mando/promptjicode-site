@@ -20,7 +20,7 @@
     "allOnGithub": "The prompt and code for every episode are on GitHub",
     "toolsKicker": "Tools",
     "toolsTitle": "PromptjiCode Interview",
-    "toolsDesc": "Test yourself with real frontend interview questions at three levels and in three languages, and see how you compare. Every answer comes with an explanation.",
+    "toolsDesc": "Test yourself with real Frontend, Backend and Full-stack interview questions at three levels and in three languages, and see how you compare. Every answer comes with an explanation.",
     "toolsStat1": "topics",
     "toolsStat2": "levels",
     "toolsStat3": "languages",
@@ -29,7 +29,8 @@
     "aboutTitle": "I’m Yaman",
     "aboutText": "A frontend developer. Here I share what I learn about prompts and code, in a simple way for developers and non-developers alike, and we learn together.",
     "aboutCta": "My personal page",
-    "footer": "Write it right… get it right"
+    "footer": "Write it right… get it right",
+    "toolsStatTracks": "tracks"
   },
   "portfolio": {
     "title": "Yaman Mando · Senior Frontend Developer",

@@ -97,7 +97,10 @@ useSeoMeta({
     <div class="hero-bg relative overflow-hidden">
       <section id="top" class="mx-auto grid max-w-5xl items-center gap-12 px-5 pt-16 pb-16 md:grid-cols-[1.25fr_1fr] md:pt-24 md:pb-20">
         <div class="hero-in flex flex-col gap-6">
-          <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl">{{ PERSON.name[loc] }}</h1>
+          <div class="flex items-center gap-5">
+            <img src="/img/yaman.webp" :alt="PERSON.name[loc]" width="220" height="220" class="size-20 shrink-0 rounded-full object-cover shadow-[0_10px_30px_-10px_rgba(29,22,17,.45)] ring-4 ring-white sm:size-24">
+            <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl">{{ PERSON.name[loc] }}</h1>
+          </div>
           <p class="max-w-[40ch] text-xl leading-relaxed text-muted sm:text-[22px]">
             <b class="font-semibold text-text">{{ PERSON.roleStrong[loc] }}.</b>
             {{ ' ' }}<BidiText plain :text="PERSON.role[loc]" />
@@ -165,7 +168,7 @@ useSeoMeta({
                 <BidiText plain :text="pt" />
               </li>
             </ul>
-            <a :href="mailto(sv.title[loc])" class="mt-auto inline-flex w-fit items-center gap-1.5 pt-2 text-sm font-bold text-caramel-dark hover:underline">
+            <a :href="mailto(sv.title[loc])" :data-track="`service:${sv.id}`" class="mt-auto inline-flex w-fit items-center gap-1.5 pt-2 text-sm font-bold text-caramel-dark hover:underline">
               {{ t('portfolio.serviceCta') }}
               <svg viewBox="0 0 24 24" class="size-4 transition group-hover:translate-x-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
             </a>
@@ -179,7 +182,7 @@ useSeoMeta({
             <h3 class="text-2xl font-bold">{{ t('portfolio.bannerH') }}</h3>
             <p class="mt-1.5 text-cream/80">{{ t('portfolio.bannerP') }}</p>
           </div>
-          <a :href="mailto(t('portfolio.bannerH'))" class="relative mt-5 inline-flex h-12 shrink-0 items-center gap-2 rounded-xl bg-caramel px-6 font-bold text-ink transition hover:brightness-110 md:mt-0">
+          <a :href="mailto(t('portfolio.bannerH'))" data-track="banner" class="relative mt-5 inline-flex h-12 shrink-0 items-center gap-2 rounded-xl bg-caramel px-6 font-bold text-ink transition hover:brightness-110 md:mt-0">
             <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
             {{ t('portfolio.emailMe') }}
           </a>
@@ -318,8 +321,8 @@ useSeoMeta({
             <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
             {{ PERSON.email }}
           </a>
-          <button type="button" class="btn-light" @click="copy(PERSON.email)">{{ t('portfolio.copyEmail') }}</button>
-          <button type="button" class="btn-light" @click="copy(PERSON.phone)">{{ PERSON.phone }}</button>
+          <button type="button" class="btn-light" data-track="copyEmail" @click="copy(PERSON.email)">{{ t('portfolio.copyEmail') }}</button>
+          <button type="button" class="btn-light" data-track="phone" @click="copy(PERSON.phone)">{{ PERSON.phone }}</button>
           <a :href="PERSON.whatsapp" target="_blank" rel="noopener" class="btn-light">WhatsApp</a>
         </div>
         <span class="min-h-5 text-sm text-caramel-dark" aria-live="polite">{{ toast }}</span>
