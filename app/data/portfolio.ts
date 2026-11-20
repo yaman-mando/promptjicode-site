@@ -6,12 +6,11 @@ type L<T = string> = Record<Locale, T>
 
 export const PERSON = {
   name: { ar: 'يمان مندو', en: 'Yaman Mando', tr: 'Yaman Mando' } as L,
-  status: { ar: 'متاح للعمل عن بُعد · مرسين، تركيا', en: 'Open to remote work · Mersin, Türkiye', tr: 'Uzaktan çalışmaya açık · Mersin, Türkiye' } as L,
   roleStrong: { ar: 'مطوّر واجهات أمامية (Senior)', en: 'Senior Frontend Developer', tr: 'Kıdemli Frontend Geliştirici' } as L,
   role: {
-    ar: 'متخصص في Vue.js وNuxt.js، أبني منصات ويب وتطبيقات جوّال سريعة تدعم العربية والإنجليزية بالكامل.',
-    en: 'specializing in Vue.js and Nuxt.js. I build fast web platforms and mobile apps with full Arabic and English support.',
-    tr: 'Vue.js ve Nuxt.js alanında uzman. Arapça ve İngilizceyi tam destekleyen hızlı web platformları ve mobil uygulamalar geliştiriyorum.',
+    ar: 'أبني منصات ويب وتطبيقات جوّال سريعة، تدعم العربية والإنجليزية بالكامل، وتخدم آلاف المستخدمين.',
+    en: 'I build fast web platforms and mobile apps with full Arabic and English support, used by thousands of people.',
+    tr: 'Arapça ve İngilizceyi tam destekleyen, binlerce kişinin kullandığı hızlı web platformları ve mobil uygulamalar geliştiriyorum.',
   } as L,
   email: 'yaman.mando.88@gmail.com',
   phone: '+90 553 003 71 45',
@@ -30,9 +29,9 @@ export const STATS: { value: string, label: L }[] = [
 export const ABOUT = {
   heading: { ar: 'من الفكرة الأولى حتى الإطلاق على المتاجر.', en: 'From the first idea to the App Store release.', tr: 'İlk fikirden App Store yayınına kadar.' } as L,
   text: {
-    ar: 'أعمل في تطوير الويب منذ أكثر من ثماني سنوات، وتخصصت في السنوات الخمس الأخيرة في Vue.js وNuxt.js. بنيت منصات ويب وتطبيقات جوّال من الصفر وأطلقتها لمستخدمين حقيقيين، مع دعم كامل للغتين العربية والإنجليزية واتجاهَي الكتابة. أهتم بالأداء والتصيير من جهة الخادم وأتمتة النشر، وأعمل بتنسيق وثيق مع فرق تطوير الخوادم والتصميم وإدارة المشاريع.',
-    en: 'I’ve worked in web development for more than eight years, and for the last five I’ve specialized in Vue.js and Nuxt.js. I’ve built web platforms and mobile apps from scratch and shipped them to real users, with full Arabic and English support in both writing directions. I care about performance, server-side rendering and automated delivery, and I work closely with backend, design and project-management teams.',
-    tr: 'Sekiz yılı aşkın süredir web geliştirme alanında çalışıyorum; son beş yıldır Vue.js ve Nuxt.js üzerine uzmanlaştım. Web platformlarını ve mobil uygulamaları sıfırdan geliştirip gerçek kullanıcılara sundum; Arapça ve İngilizceyi her iki yazı yönüyle tam olarak destekledim. Performansa, sunucu taraflı render’a ve otomatik dağıtıma önem veriyor; backend, tasarım ve proje yönetimi ekipleriyle yakın çalışıyorum.',
+    ar: 'أعمل في تطوير الويب منذ أكثر من ثماني سنوات، وعملت في السنوات الخمس الأخيرة على Vue.js وNuxt.js، وقبلها على Angular وWordPress. بنيت منصات ويب وتطبيقات جوّال من الصفر وأطلقتها لمستخدمين حقيقيين، مع دعم كامل للغتين العربية والإنجليزية واتجاهَي الكتابة. أهتم بالأداء والتصيير من جهة الخادم وأتمتة النشر، وأعمل بتنسيق وثيق مع فرق تطوير الخوادم والتصميم وإدارة المشاريع.',
+    en: 'I’ve worked in web development for more than eight years: the last five with Vue.js and Nuxt.js, and Angular and WordPress before that. I’ve built web platforms and mobile apps from scratch and shipped them to real users, with full Arabic and English support in both writing directions. I care about performance, server-side rendering and automated delivery, and I work closely with backend, design and project-management teams.',
+    tr: 'Sekiz yılı aşkın süredir web geliştirme alanında çalışıyorum: son beş yıldır Vue.js ve Nuxt.js, öncesinde Angular ve WordPress ile. Web platformlarını ve mobil uygulamaları sıfırdan geliştirip gerçek kullanıcılara sundum; Arapça ve İngilizceyi her iki yazı yönüyle tam olarak destekledim. Performansa, sunucu taraflı render’a ve otomatik dağıtıma önem veriyor; backend, tasarım ve proje yönetimi ekipleriyle yakın çalışıyorum.',
   } as L,
 }
 
@@ -171,7 +170,7 @@ export const SKILLS: { title: L, text: L }[] = [
   { title: { ar: 'تطبيقات الجوّال', en: 'Mobile', tr: 'Mobil' }, text: { ar: 'Ionic، إصدارات Android وiOS، النشر على App Store وGoogle Play', en: 'Ionic, Android and iOS builds, App Store and Google Play releases', tr: 'Ionic, Android ve iOS derlemeleri, App Store ve Google Play yayınları' } },
   { title: { ar: 'الواجهات البرمجية والسحابة', en: 'APIs & cloud', tr: 'API ve bulut' }, text: { ar: 'REST APIs, Authentication, Firebase, Azure, Cloudflare Workers & D1', en: 'REST APIs, Authentication, Firebase, Azure, Cloudflare Workers & D1', tr: 'REST APIs, Authentication, Firebase, Azure, Cloudflare Workers & D1' } },
   { title: { ar: 'النشر والتسليم', en: 'Delivery', tr: 'Teslimat' }, text: { ar: 'Git, GitHub, GitHub Actions, CI/CD', en: 'Git, GitHub, GitHub Actions, CI/CD', tr: 'Git, GitHub, GitHub Actions, CI/CD' } },
-  { title: { ar: 'مهارات أخرى', en: 'Also', tr: 'Diğer' }, text: { ar: 'Angular (سنتان)، WordPress وPHP، تحسين الظهور في محركات البحث، Bootstrap', en: 'Angular (2 years), WordPress & PHP, SEO, Bootstrap', tr: 'Angular (2 yıl), WordPress ve PHP, SEO, Bootstrap' } },
+  { title: { ar: 'مهارات أخرى', en: 'Also', tr: 'Diğer' }, text: { ar: 'Angular لمدة سنتين، WordPress وPHP، تحسين الظهور في محركات البحث، Bootstrap', en: 'Angular (2 years), WordPress & PHP, SEO, Bootstrap', tr: 'Angular (2 yıl), WordPress ve PHP, SEO, Bootstrap' } },
   { title: { ar: 'أدوات الذكاء الاصطناعي', en: 'AI tools', tr: 'Yapay zekâ araçları' }, text: { ar: 'أستخدم Claude وChatGPT وGitHub Copilot وGemini في البحث وتتبّع الأخطاء وكتابة الاختبارات، مع مراجعة دقيقة لكل النتائج', en: 'Claude, ChatGPT, GitHub Copilot and Gemini for research, debugging and tests, always with careful review', tr: 'Araştırma, hata ayıklama ve test için Claude, ChatGPT, GitHub Copilot ve Gemini; her zaman dikkatli kontrolle' } },
 ]
 
@@ -209,7 +208,7 @@ export const JOBS: { when: L, title: L, org: string, text: L }[] = [
 ]
 
 export const EDUCATION: { title: L, school: L, year: string }[] = [
-  { title: { ar: 'بكالوريوس في تقنية المعلومات', en: 'B.Sc. in Information Technology', tr: 'Bilgi Teknolojileri Lisansı' }, school: { ar: 'الجامعة الافتراضية السورية', en: 'Syrian Virtual University', tr: 'Suriye Sanal Üniversitesi' }, year: '2012' },
+  { title: { ar: 'بكالوريوس تكنولوجيا المعلومات (BIT)', en: 'Bachelor of Information Technology (BIT)', tr: 'Bilgi Teknolojileri Lisansı (BIT)' }, school: { ar: 'الجامعة الافتراضية السورية', en: 'Syrian Virtual University', tr: 'Suriye Sanal Üniversitesi' }, year: '2012' },
   { title: { ar: 'دبلوم تقني في هندسة الحاسوب', en: 'Technical Diploma in Computer Engineering', tr: 'Bilgisayar Mühendisliği Teknik Diploması' }, school: { ar: 'جامعة البعث', en: 'Al-Baath University', tr: 'Al-Baath Üniversitesi' }, year: '2009' },
 ]
 
@@ -217,4 +216,71 @@ export const LANGUAGES: { name: L, level: L }[] = [
   { name: { ar: 'العربية', en: 'Arabic', tr: 'Arapça' }, level: { ar: 'اللغة الأم', en: 'Native', tr: 'Ana dil' } },
   { name: { ar: 'الإنجليزية', en: 'English', tr: 'İngilizce' }, level: { ar: 'إتقان مهني', en: 'Professional working', tr: 'Profesyonel çalışma düzeyi' } },
   { name: { ar: 'التركية', en: 'Turkish', tr: 'Türkçe' }, level: { ar: 'إتقان مهني', en: 'Professional working', tr: 'Profesyonel çalışma düzeyi' } },
+]
+
+export interface Service {
+  id: 'build' | 'rescue' | 'speed' | 'mentor'
+  title: L
+  text: L
+  points: L<string[]>
+}
+
+/** What I offer. Each card opens an email with the service as the subject. */
+export const SERVICES: Service[] = [
+  {
+    id: 'build',
+    title: { ar: 'تطوير واجهات المواقع والتطبيقات', en: 'Frontend development', tr: 'Frontend geliştirme' },
+    text: {
+      ar: 'أبني مواقع ولوحات تحكم وتطبيقات ويب سريعة ومتجاوبة، جاهزة للإطلاق وسهلة التطوير لاحقًا.',
+      en: 'Fast, responsive websites, dashboards and web apps, ready to launch and easy to grow.',
+      tr: 'Yayına hazır, büyütmesi kolay, hızlı ve duyarlı web siteleri, paneller ve web uygulamaları.',
+    },
+    points: {
+      ar: ['مواقع شركات وصفحات هبوط', 'لوحات تحكم وتطبيقات SaaS', 'دعم كامل للعربية وRTL وتعدد اللغات'],
+      en: ['Company sites and landing pages', 'Dashboards and SaaS front-ends', 'Full Arabic, RTL and multi-language support'],
+      tr: ['Kurumsal siteler ve açılış sayfaları', 'Yönetim panelleri ve SaaS arayüzleri', 'Tam Arapça, RTL ve çok dilli destek'],
+    },
+  },
+  {
+    id: 'rescue',
+    title: { ar: 'مراجعة وإصلاح المشاريع المبنية بالذكاء الاصطناعي', en: 'Review and fix AI-built projects', tr: 'Yapay zekâyla yapılmış projeleri inceleme ve düzeltme' },
+    text: {
+      ar: 'بنيت مشروعك بأدوات الذكاء الاصطناعي ويعمل ظاهريًا؟ أراجع الكود وأجد نقاط الضعف قبل أن تظهر مع المستخدمين أو مع نمو المشروع.',
+      en: 'Built your project with AI tools and it seems to work? I review the code and find the weak spots before your users or your growth do.',
+      tr: 'Projeni yapay zekâ araçlarıyla yaptın ve çalışıyor gibi mi görünüyor? Kodu inceleyip zayıf noktaları kullanıcılarından ya da büyümenden önce bulurum.',
+    },
+    points: {
+      ar: ['مراجعة الأمان والأداء وجودة الكود', 'تقرير واضح بالمشاكل وأولوياتها', 'إصلاح وإعادة هيكلة'],
+      en: ['Security, performance and code-quality review', 'A clear report of issues and priorities', 'Fixes and refactoring'],
+      tr: ['Güvenlik, performans ve kod kalitesi incelemesi', 'Sorunlar ve öncelikleriyle net bir rapor', 'Düzeltme ve yeniden yapılandırma'],
+    },
+  },
+  {
+    id: 'speed',
+    title: { ar: 'تحسين الأداء والظهور في محركات البحث', en: 'Performance and SEO audits', tr: 'Performans ve SEO denetimi' },
+    text: {
+      ar: 'أقيس سرعة موقعك وأصلح ما يبطئه، وأجهّزه تقنيًا ليظهر في نتائج البحث.',
+      en: 'I measure your site’s speed, fix what slows it down, and get it technically ready for search engines.',
+      tr: 'Sitenin hızını ölçer, onu yavaşlatanı düzeltir ve arama motorları için teknik olarak hazırlarım.',
+    },
+    points: {
+      ar: ['Core Web Vitals وسرعة التحميل', 'تحسين الصور والخطوط والتحميل الكسول', 'SEO تقني للمواقع متعددة اللغات'],
+      en: ['Core Web Vitals and load speed', 'Images, fonts and lazy loading', 'Technical SEO for multi-language sites'],
+      tr: ['Core Web Vitals ve yükleme hızı', 'Görseller, fontlar ve lazy loading', 'Çok dilli siteler için teknik SEO'],
+    },
+  },
+  {
+    id: 'mentor',
+    title: { ar: 'تدريب وإرشاد', en: 'Training and mentoring', tr: 'Eğitim ve mentorluk' },
+    text: {
+      ar: 'جلسات للمطوّرين والفرق: كيف تستخدم الذكاء الاصطناعي في البرمجة بوعي، وكيف تستعد لمقابلات الواجهات الأمامية.',
+      en: 'Sessions for developers and teams: using AI for coding with care, and preparing for frontend interviews.',
+      tr: 'Geliştiriciler ve ekipler için oturumlar: yapay zekâyı kodlamada bilinçli kullanmak ve frontend mülakatlarına hazırlanmak.',
+    },
+    points: {
+      ar: ['جلسات فردية', 'ورش عمل للفرق', 'تحضير لمقابلات العمل ومراجعة الكود'],
+      en: ['One-to-one sessions', 'Team workshops', 'Interview prep and code review'],
+      tr: ['Birebir oturumlar', 'Ekip atölyeleri', 'Mülakat hazırlığı ve kod incelemesi'],
+    },
+  },
 ]

@@ -38,7 +38,8 @@
       "work": "Projeler",
       "skills": "Yetenekler",
       "exp": "Deneyim",
-      "contact": "İletişim"
+      "contact": "İletişim",
+      "services": "Hizmetler"
     },
     "cta": {
       "contact": "İletişime geç",
@@ -57,10 +58,19 @@
     "langK": "Diller",
     "cK": "İletişim",
     "cH": "Bir sonraki projenizde birlikte çalışalım.",
-    "cP": "Uzaktan frontend pozisyonlarına ve serbest projelere açığım.",
+    "cP": "İş fırsatlarına ve serbest projelere açığım.",
     "copied": "Kopyalandı",
     "tapToCopy": "Kopyalamak için e-postaya veya numaraya tıklayın",
     "channel": "PromptjiCode kanalı",
-    "channelText": "Promptlar ve kod hakkında öğrendiklerimi Arapça bir eğitim kanalında paylaşıyorum."
+    "channelText": "Promptlar ve kod hakkında öğrendiklerimi Arapça bir eğitim kanalında paylaşıyorum.",
+    "servicesK": "Hizmetler",
+    "servicesH": "Nasıl yardımcı olabilirim",
+    "servicesP": "İşimin yanında serbest projeler de alıyorum. İhtiyacın olanı seç ve proje detaylarını gönder; genellikle bir iki gün içinde dönerim.",
+    "serviceCta": "Bu hizmeti sor",
+    "bannerH": "Bir projen ya da fikrin mi var?",
+    "bannerP": "Bana kısa bir not gönder, ilk adımda anlaşalım.",
+    "emailMe": "Bana e-posta gönder",
+    "now": "Şu an",
+    "copyEmail": "E-postayı kopyala"
   }
 }
