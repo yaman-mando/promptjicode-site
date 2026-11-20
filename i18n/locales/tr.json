@@ -40,7 +40,7 @@
       "skills": "Yetenekler",
       "exp": "Deneyim",
       "contact": "İletişim",
-      "services": "Hizmetler"
+      "services": "Uzmanlık"
     },
     "cta": {
       "contact": "İletişime geç",
@@ -59,17 +59,14 @@
     "langK": "Diller",
     "cK": "İletişim",
     "cH": "Bir sonraki projenizde birlikte çalışalım.",
-    "cP": "İş fırsatlarına ve serbest projelere açığım.",
+    "cP": "Mesajın beni memnun eder; genelde bir iki gün içinde yanıt veririm.",
     "copied": "Kopyalandı",
     "tapToCopy": "Kopyalamak için e-postaya veya numaraya tıklayın",
     "channel": "PromptjiCode kanalı",
     "channelText": "Promptlar ve kod hakkında öğrendiklerimi Arapça bir eğitim kanalında paylaşıyorum.",
-    "servicesK": "Hizmetler",
-    "servicesH": "Nasıl yardımcı olabilirim",
-    "servicesP": "İşimin yanında serbest projeler de alıyorum. İhtiyacın olanı seç ve proje detaylarını gönder; genellikle bir iki gün içinde dönerim.",
-    "serviceCta": "Bu hizmeti sor",
-    "bannerH": "Bir projen ya da fikrin mi var?",
-    "bannerP": "Bana kısa bir not gönder, ilk adımda anlaşalım.",
+    "servicesK": "Uzmanlık",
+    "servicesH": "En iyi yaptıklarım",
+    "servicesP": "Günlük işimde odaklandığım ve bir ekibe ve ürüne en çok değer kattığım alanlar.",
     "emailMe": "Bana e-posta gönder",
     "now": "Şu an",
     "copyEmail": "E-postayı kopyala"

@@ -40,7 +40,7 @@
       "skills": "Skills",
       "exp": "Experience",
       "contact": "Contact",
-      "services": "Services"
+      "services": "Expertise"
     },
     "cta": {
       "contact": "Get in touch",
@@ -59,17 +59,14 @@
     "langK": "Languages",
     "cK": "Contact",
     "cH": "Let’s work on your next project.",
-    "cP": "Open to job opportunities and freelance projects.",
+    "cP": "Happy to hear from you. I usually reply within a day or two.",
     "copied": "Copied",
     "tapToCopy": "Click the email or number to copy it",
     "channel": "PromptjiCode channel",
     "channelText": "I share what I learn about prompts and code on an Arabic educational channel.",
-    "servicesK": "Services",
-    "servicesH": "How I can help",
-    "servicesP": "I take on freelance projects alongside my job. Pick what you need and send me the details; I usually reply within a day or two.",
-    "serviceCta": "Ask about this",
-    "bannerH": "Got a project or an idea?",
-    "bannerP": "Send me a short note about it and we’ll agree on the first step.",
+    "servicesK": "Expertise",
+    "servicesH": "What I do best",
+    "servicesP": "The areas I focus on day to day, where I add the most value to a team and a product.",
     "emailMe": "Email me",
     "now": "Currently at",
     "copyEmail": "Copy email"

@@ -222,7 +222,7 @@ export const LANGUAGES: { name: L, level: L }[] = [
 ]
 
 export interface Service {
-  id: 'build' | 'rescue' | 'speed' | 'mentor'
+  id: 'build' | 'rescue' | 'speed'
   title: L
   text: L
   points: L<string[]>
@@ -234,56 +234,42 @@ export const SERVICES: Service[] = [
     id: 'build',
     title: { ar: 'تطوير واجهات المواقع والتطبيقات', en: 'Frontend development', tr: 'Frontend geliştirme' },
     text: {
-      ar: 'أبني مواقع ولوحات تحكم وتطبيقات ويب سريعة ومتجاوبة، جاهزة للإطلاق وسهلة التطوير لاحقًا.',
-      en: 'Fast, responsive websites, dashboards and web apps, ready to launch and easy to grow.',
-      tr: 'Yayına hazır, büyütmesi kolay, hızlı ve duyarlı web siteleri, paneller ve web uygulamaları.',
+      ar: 'أبني واجهات سريعة ومتجاوبة لمنصات ولوحات تحكم وتطبيقات، بكود منظّم يسهل على الفريق تطويره لاحقًا.',
+      en: 'I build fast, responsive interfaces for platforms, dashboards and apps, with clean code the team can keep growing.',
+      tr: 'Platformlar, yönetim panelleri ve uygulamalar için hızlı, duyarlı arayüzler; ekibin büyütmeye devam edebileceği temiz kodla.',
     },
     points: {
-      ar: ['مواقع شركات وصفحات هبوط', 'لوحات تحكم وتطبيقات SaaS', 'دعم كامل للعربية وRTL وتعدد اللغات'],
-      en: ['Company sites and landing pages', 'Dashboards and SaaS front-ends', 'Full Arabic, RTL and multi-language support'],
-      tr: ['Kurumsal siteler ve açılış sayfaları', 'Yönetim panelleri ve SaaS arayüzleri', 'Tam Arapça, RTL ve çok dilli destek'],
+      ar: ['منصات تعليمية ومتاجر ومواقع شركات', 'لوحات تحكم وتطبيقات SaaS', 'دعم كامل للعربية وRTL وتعدد اللغات'],
+      en: ['Learning platforms, stores and company sites', 'Dashboards and SaaS front-ends', 'Full Arabic, RTL and multi-language support'],
+      tr: ['Eğitim platformları, mağazalar ve kurumsal siteler', 'Yönetim panelleri ve SaaS arayüzleri', 'Tam Arapça, RTL ve çok dilli destek'],
     },
   },
   {
     id: 'rescue',
-    title: { ar: 'مراجعة وإصلاح المشاريع المبنية بالذكاء الاصطناعي', en: 'Review and fix AI-built projects', tr: 'Yapay zekâyla yapılmış projeleri inceleme ve düzeltme' },
+    title: { ar: 'مراجعة الكود وتحسين جودته', en: 'Code review and quality', tr: 'Kod incelemesi ve kalite' },
     text: {
-      ar: 'بنيت مشروعك بأدوات الذكاء الاصطناعي ويعمل ظاهريًا؟ أراجع الكود وأجد نقاط الضعف قبل أن تظهر مع المستخدمين أو مع نمو المشروع.',
-      en: 'Built your project with AI tools and it seems to work? I review the code and find the weak spots before your users or your growth do.',
-      tr: 'Projeni yapay zekâ araçlarıyla yaptın ve çalışıyor gibi mi görünüyor? Kodu inceleyip zayıf noktaları kullanıcılarından ya da büyümenden önce bulurum.',
+      ar: 'أراجع الكود، ومنه الكود المكتوب بأدوات الذكاء الاصطناعي، وأجد نقاط الضعف قبل أن تظهر مع المستخدمين أو مع نمو المشروع.',
+      en: 'I review code, including code written with AI tools, and find the weak spots before users or growth expose them.',
+      tr: 'Yapay zekâ araçlarıyla yazılanlar dahil kodu inceler, zayıf noktaları kullanıcılar ya da büyüme ortaya çıkarmadan önce bulurum.',
     },
     points: {
-      ar: ['مراجعة الأمان والأداء وجودة الكود', 'تقرير واضح بالمشاكل وأولوياتها', 'إصلاح وإعادة هيكلة'],
-      en: ['Security, performance and code-quality review', 'A clear report of issues and priorities', 'Fixes and refactoring'],
-      tr: ['Güvenlik, performans ve kod kalitesi incelemesi', 'Sorunlar ve öncelikleriyle net bir rapor', 'Düzeltme ve yeniden yapılandırma'],
+      ar: ['الأمان والأداء وقابلية الصيانة', 'إعادة هيكلة تدريجية دون إيقاف العمل', 'معايير مشتركة للفريق'],
+      en: ['Security, performance and maintainability', 'Step-by-step refactoring without stopping work', 'Shared standards for the team'],
+      tr: ['Güvenlik, performans ve bakım kolaylığı', 'İşi durdurmadan adım adım yeniden yapılandırma', 'Ekip için ortak standartlar'],
     },
   },
   {
     id: 'speed',
-    title: { ar: 'تحسين الأداء والظهور في محركات البحث', en: 'Performance and SEO audits', tr: 'Performans ve SEO denetimi' },
+    title: { ar: 'الأداء والظهور في محركات البحث', en: 'Performance and SEO', tr: 'Performans ve SEO' },
     text: {
-      ar: 'أقيس سرعة موقعك وأصلح ما يبطئه، وأجهّزه تقنيًا ليظهر في نتائج البحث.',
-      en: 'I measure your site’s speed, fix what slows it down, and get it technically ready for search engines.',
-      tr: 'Sitenin hızını ölçer, onu yavaşlatanı düzeltir ve arama motorları için teknik olarak hazırlarım.',
+      ar: 'أقيس سرعة الموقع وأصلح ما يبطئه، وأجهّزه تقنيًا ليظهر في نتائج البحث.',
+      en: 'I measure a site’s speed, fix what slows it down, and get it technically ready for search engines.',
+      tr: 'Sitenin hızını ölçer, yavaşlatanı düzeltir ve arama motorları için teknik olarak hazırlarım.',
     },
     points: {
       ar: ['Core Web Vitals وسرعة التحميل', 'تحسين الصور والخطوط والتحميل الكسول', 'SEO تقني للمواقع متعددة اللغات'],
       en: ['Core Web Vitals and load speed', 'Images, fonts and lazy loading', 'Technical SEO for multi-language sites'],
       tr: ['Core Web Vitals ve yükleme hızı', 'Görseller, fontlar ve lazy loading', 'Çok dilli siteler için teknik SEO'],
-    },
-  },
-  {
-    id: 'mentor',
-    title: { ar: 'تدريب وإرشاد', en: 'Training and mentoring', tr: 'Eğitim ve mentorluk' },
-    text: {
-      ar: 'جلسات للمطوّرين والفرق: كيف تستخدم الذكاء الاصطناعي في البرمجة بوعي، وكيف تستعد لمقابلات الواجهات الأمامية.',
-      en: 'Sessions for developers and teams: using AI for coding with care, and preparing for frontend interviews.',
-      tr: 'Geliştiriciler ve ekipler için oturumlar: yapay zekâyı kodlamada bilinçli kullanmak ve frontend mülakatlarına hazırlanmak.',
-    },
-    points: {
-      ar: ['جلسات فردية', 'ورش عمل للفرق', 'تحضير لمقابلات العمل ومراجعة الكود'],
-      en: ['One-to-one sessions', 'Team workshops', 'Interview prep and code review'],
-      tr: ['Birebir oturumlar', 'Ekip atölyeleri', 'Mülakat hazırlığı ve kod incelemesi'],
     },
   },
 ]

@@ -60,7 +60,6 @@ const SERVICE_ICONS: Record<string, string> = {
   build: 'M4 5h16v11H4zM8 20h8M12 16v4M8 9l-2 2 2 2m8-4 2 2-2 2m-5 1 2-6',
   rescue: 'M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Zm-3 9 2 2 4-4',
   speed: 'M12 14l4-4M4.9 19a9 9 0 1 1 14.2 0M12 5v2M5 12H3m18 0h-2M6.3 6.3l1.4 1.4',
-  mentor: 'M3 8l9-4 9 4-9 4-9-4Zm4 2v5c0 1.7 2.2 3 5 3s5-1.3 5-3v-5M21 8v6',
 }
 
 useSeoMeta({
@@ -83,7 +82,7 @@ useSeoMeta({
           <b class="font-bold">{{ PERSON.name[loc] }}</b>
         </a>
         <nav class="hidden gap-7 text-sm text-muted md:flex">
-          <a href="#services" class="hover:text-text">{{ t('portfolio.nav.services') }}</a>
+          <a href="#expertise" class="hover:text-text">{{ t('portfolio.nav.services') }}</a>
           <a href="#work" class="hover:text-text">{{ t('portfolio.nav.work') }}</a>
           <a href="#skills" class="hover:text-text">{{ t('portfolio.nav.skills') }}</a>
           <a href="#experience" class="hover:text-text">{{ t('portfolio.nav.exp') }}</a>
@@ -106,8 +105,8 @@ useSeoMeta({
             {{ ' ' }}<BidiText plain :text="PERSON.role[loc]" />
           </p>
           <div class="flex flex-wrap gap-2.5">
-            <a href="#services" class="btn-dark">{{ t('portfolio.nav.services') }}</a>
-            <a href="#work" class="btn-light">{{ t('portfolio.cta.work') }}</a>
+            <a href="#work" class="btn-dark">{{ t('portfolio.cta.work') }}</a>
+            <a href="#contact" class="btn-light">{{ t('portfolio.nav.contact') }}</a>
             <a :href="PERSON.linkedin" target="_blank" rel="noopener" class="btn-light" aria-label="LinkedIn"><SocialIcon id="linkedin" /><span dir="ltr" class="hidden sm:inline">LinkedIn</span></a>
             <a :href="PERSON.github" target="_blank" rel="noopener" class="btn-light" aria-label="GitHub"><SocialIcon id="github" /><span dir="ltr" class="hidden sm:inline">GitHub</span></a>
           </div>
@@ -146,13 +145,13 @@ useSeoMeta({
       </div>
 
       <!-- Services -->
-      <section id="services" class="pt-24">
+      <section id="expertise" class="pt-24">
         <div v-reveal class="max-w-2xl">
           <span class="kicker">{{ t('portfolio.servicesK') }}</span>
           <h2 class="h2 !mb-3">{{ t('portfolio.servicesH') }}</h2>
           <p class="mb-10 text-[17px] leading-relaxed text-[#4a3f36]">{{ t('portfolio.servicesP') }}</p>
         </div>
-        <div class="grid gap-4 md:grid-cols-2">
+        <div class="grid gap-4 md:grid-cols-3">
           <article
             v-for="(sv, i) in SERVICES" :key="sv.id" v-reveal="i * 80"
             class="card group flex flex-col gap-4 p-6 transition hover:-translate-y-1 hover:border-caramel/50 hover:shadow-[0_20px_40px_-20px_rgba(184,118,47,.35)] md:p-7"
@@ -168,25 +167,9 @@ useSeoMeta({
                 <BidiText plain :text="pt" />
               </li>
             </ul>
-            <a :href="mailto(sv.title[loc])" :data-track="`service:${sv.id}`" class="mt-auto inline-flex w-fit items-center gap-1.5 pt-2 text-sm font-bold text-caramel-dark hover:underline">
-              {{ t('portfolio.serviceCta') }}
-              <svg viewBox="0 0 24 24" class="size-4 transition group-hover:translate-x-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
-            </a>
           </article>
         </div>
 
-        <!-- Banner -->
-        <div v-reveal class="relative mt-6 overflow-hidden rounded-3xl bg-ink p-7 text-cream md:flex md:items-center md:justify-between md:gap-8 md:p-10">
-          <div class="pointer-events-none absolute -end-20 -top-24 size-72 rounded-full bg-caramel/25 blur-3xl" aria-hidden="true" />
-          <div class="relative">
-            <h3 class="text-2xl font-bold">{{ t('portfolio.bannerH') }}</h3>
-            <p class="mt-1.5 text-cream/80">{{ t('portfolio.bannerP') }}</p>
-          </div>
-          <a :href="mailto(t('portfolio.bannerH'))" data-track="banner" class="relative mt-5 inline-flex h-12 shrink-0 items-center gap-2 rounded-xl bg-caramel px-6 font-bold text-ink transition hover:brightness-110 md:mt-0">
-            <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
-            {{ t('portfolio.emailMe') }}
-          </a>
-        </div>
       </section>
 
       <!-- About -->
