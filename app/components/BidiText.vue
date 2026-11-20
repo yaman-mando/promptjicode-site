@@ -36,6 +36,10 @@ const parts = computed<Part[]>(() => {
     last = start + run.length
   }
   if (last < props.text.length) out.push({ text: props.text.slice(last), kind: 'plain' })
+  // A lone "و" (and) glued to an English word reads like a stray letter, so give it a thin gap
+  out.forEach((p, i) => {
+    if (p.kind === 'plain' && out[i + 1] && /(^|[\s(])و$/.test(p.text)) p.text += '\u2009'
+  })
   return out
 })
 </script>

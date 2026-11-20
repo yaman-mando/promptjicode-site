@@ -351,7 +351,7 @@ useSeoMeta({
 .btn-light { @apply inline-flex h-11 items-center gap-2 rounded-xl border border-line bg-white px-[18px] text-sm font-semibold text-text transition hover:border-[#d8cfc6] hover:bg-paper-2; }
 .btn-dark :deep(svg), .btn-light :deep(svg) { width: 16px; height: 16px; }
 .kicker { @apply inline-flex items-center gap-2 text-[13px] font-bold tracking-wide text-caramel-dark before:h-px before:w-6 before:bg-caramel; }
-.h2 { @apply mt-2 mb-10 text-3xl font-bold tracking-tight sm:text-4xl; }
+.h2 { @apply mt-2 mb-10 text-3xl font-bold leading-snug tracking-tight text-balance sm:text-4xl; }
 .card { @apply rounded-2xl border border-line bg-white; }
 
 .hero-bg {
