@@ -154,8 +154,7 @@ useSeoMeta({
         <div class="flex flex-col gap-6 rounded-3xl border border-white/10 bg-white/[0.03] p-7 sm:flex-row sm:items-center md:p-10">
           <img src="/avatar.webp" alt="" width="96" height="96" class="size-24 shrink-0 rounded-full">
           <div class="flex-1">
-            <p class="text-sm font-semibold text-caramel">{{ t('channel.aboutKicker') }}</p>
-            <h2 class="mt-1 text-2xl font-extrabold">{{ t('channel.aboutTitle') }}</h2>
+            <h2 class="text-2xl font-extrabold">{{ t('channel.aboutTitle') }}</h2>
             <p class="mt-2 max-w-2xl leading-relaxed text-cream/85"><BidiText :text="t('channel.aboutText')" /></p>
           </div>
           <div class="flex shrink-0 flex-wrap gap-2">
