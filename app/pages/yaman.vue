@@ -98,7 +98,7 @@ useSeoMeta({
       <section id="top" class="mx-auto grid max-w-5xl items-center gap-12 px-5 pt-16 pb-16 md:grid-cols-[1.25fr_1fr] md:pt-24 md:pb-20">
         <div class="hero-in flex flex-col gap-6">
           <div class="flex items-center gap-5">
-            <img src="/img/yaman.webp" :alt="PERSON.name[loc]" width="220" height="220" class="size-20 shrink-0 rounded-full object-cover shadow-[0_10px_30px_-10px_rgba(29,22,17,.45)] ring-4 ring-white sm:size-24">
+            <img src="/img/yaman.webp" :alt="PERSON.name[loc]" width="256" height="256" class="size-20 shrink-0 rounded-full object-cover shadow-[0_10px_30px_-10px_rgba(29,22,17,.45)] ring-4 ring-white sm:size-24">
             <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl">{{ PERSON.name[loc] }}</h1>
           </div>
           <p class="max-w-[40ch] text-xl leading-relaxed text-muted sm:text-[22px]">
