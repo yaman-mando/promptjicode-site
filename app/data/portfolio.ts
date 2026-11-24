@@ -23,15 +23,15 @@ export const STATS: { value: string, label: L }[] = [
   { value: '~90,000', label: { ar: 'مستخدم لمنصة «اختبارات»', en: 'users on Ekhtibarat', tr: 'Ekhtibarat kullanıcısı' } },
   { value: '5,000+', label: { ar: 'تنزيل لتطبيق «مكتمل»', en: 'Muktamel app installs', tr: 'Muktamel uygulama indirmesi' } },
   { value: '~70%', label: { ar: 'أسرع في تحميل الصفحات', en: 'faster page loads', tr: 'daha hızlı sayfa yükleme' } },
-  { value: '8+', label: { ar: 'سنوات خبرة في تطوير الويب', en: 'years in web development', tr: 'yıllık web geliştirme deneyimi' } },
+  { value: '9+', label: { ar: 'سنوات خبرة في تطوير الويب', en: 'years in web development', tr: 'yıllık web geliştirme deneyimi' } },
 ]
 
 export const ABOUT = {
   heading: { ar: 'من الفكرة الأولى حتى الإطلاق على المتاجر.', en: 'From the first idea to the App Store release.', tr: 'İlk fikirden App Store yayınına kadar.' } as L,
   text: {
-    ar: 'أعمل في تطوير الويب منذ أكثر من ثماني سنوات، وعملت في السنوات الخمس الأخيرة على Vue.js وNuxt.js، وقبلها على Angular وWordPress. بنيت منصات ويب وتطبيقات جوّال من الصفر وأطلقتها لمستخدمين حقيقيين، مع دعم كامل للغتين العربية والإنجليزية واتجاهَي الكتابة. أهتم بالأداء والتصيير من جهة الخادم وأتمتة النشر، وأعمل بتنسيق وثيق مع فرق تطوير الخوادم والتصميم وإدارة المشاريع.',
-    en: 'I’ve worked in web development for more than eight years: the last five with Vue.js and Nuxt.js, and Angular and WordPress before that. I’ve built web platforms and mobile apps from scratch and shipped them to real users, with full Arabic and English support in both writing directions. I care about performance, server-side rendering and automated delivery, and I work closely with backend, design and project-management teams.',
-    tr: 'Sekiz yılı aşkın süredir web geliştirme alanında çalışıyorum: son beş yıldır Vue.js ve Nuxt.js, öncesinde Angular ve WordPress ile. Web platformlarını ve mobil uygulamaları sıfırdan geliştirip gerçek kullanıcılara sundum; Arapça ve İngilizceyi her iki yazı yönüyle tam olarak destekledim. Performansa, sunucu taraflı render’a ve otomatik dağıtıma önem veriyor; backend, tasarım ve proje yönetimi ekipleriyle yakın çalışıyorum.',
+    ar: 'أعمل في تطوير الويب منذ أكثر من تسع سنوات، وعملت في السنوات الخمس الأخيرة على Vue.js وNuxt.js، وقبلها على Angular وWordPress. بنيت منصات ويب وتطبيقات جوّال من الصفر وأطلقتها لمستخدمين حقيقيين، مع دعم كامل للغتين العربية والإنجليزية واتجاهَي الكتابة. أهتم بالأداء والتصيير من جهة الخادم وأتمتة النشر، وأعمل بتنسيق وثيق مع فرق تطوير الخوادم والتصميم وإدارة المشاريع.',
+    en: 'I’ve worked in web development for more than nine years: the last five with Vue.js and Nuxt.js, and Angular and WordPress before that. I’ve built web platforms and mobile apps from scratch and shipped them to real users, with full Arabic and English support in both writing directions. I care about performance, server-side rendering and automated delivery, and I work closely with backend, design and project-management teams.',
+    tr: 'Dokuz yılı aşkın süredir web geliştirme alanında çalışıyorum: son beş yıldır Vue.js ve Nuxt.js, öncesinde Angular ve WordPress ile. Web platformlarını ve mobil uygulamaları sıfırdan geliştirip gerçek kullanıcılara sundum; Arapça ve İngilizceyi her iki yazı yönüyle tam olarak destekledim. Performansa, sunucu taraflı render’a ve otomatik dağıtıma önem veriyor; backend, tasarım ve proje yönetimi ekipleriyle yakın çalışıyorum.',
   } as L,
 }
 

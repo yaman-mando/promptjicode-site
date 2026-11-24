@@ -122,7 +122,7 @@ useSeoMeta({
             </div>
             <pre class="px-5 py-4 whitespace-pre"><span class="text-[#c792ea]">const</span> yaman = {
   role: <span class="text-caramel">'Senior Frontend'</span>,
-  years: <span class="text-[#f78c6c]">8</span>,
+  years: <span class="text-[#f78c6c]">9</span>,
   shipped: [
     <span class="text-caramel">'Ekhtibarat'</span>,
     <span class="text-caramel">'Muktamel'</span>,
