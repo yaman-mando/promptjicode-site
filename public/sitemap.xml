@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://promptjicode.com</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://promptjicode.com"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://promptjicode.com/en"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://promptjicode.com/tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://promptjicode.com"/>
+  </url>
+  <url>
+    <loc>https://promptjicode.com/en</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://promptjicode.com"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://promptjicode.com/en"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://promptjicode.com/tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://promptjicode.com"/>
+  </url>
+  <url>
+    <loc>https://promptjicode.com/tr</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://promptjicode.com"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://promptjicode.com/en"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://promptjicode.com/tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://promptjicode.com"/>
+  </url>
+  <url>
+    <loc>https://promptjicode.com/yaman</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://promptjicode.com/yaman"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://promptjicode.com/en/yaman"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://promptjicode.com/tr/yaman"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://promptjicode.com/yaman"/>
+  </url>
+  <url>
+    <loc>https://promptjicode.com/en/yaman</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://promptjicode.com/yaman"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://promptjicode.com/en/yaman"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://promptjicode.com/tr/yaman"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://promptjicode.com/yaman"/>
+  </url>
+  <url>
+    <loc>https://promptjicode.com/tr/yaman</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://promptjicode.com/yaman"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://promptjicode.com/en/yaman"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://promptjicode.com/tr/yaman"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://promptjicode.com/yaman"/>
+  </url>
+</urlset>
