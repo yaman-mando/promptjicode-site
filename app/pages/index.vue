@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Locale } from '~/data/channel'
-import { HERO, INTERVIEW_EPISODES, INTERVIEW_SITE, REELS, REPO, SERIES, SOCIALS } from '~/data/channel'
+import { HERO, INTERVIEW_EPISODES, INTERVIEW_SITE, MENU_SITE, REELS, REPO, SERIES, SOCIALS } from '~/data/channel'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -15,6 +15,8 @@ const levelClass: Record<string, string> = {
 }
 
 const interviewUrl = computed(() => (loc.value === 'ar' ? INTERVIEW_SITE : `${INTERVIEW_SITE}/${loc.value}`))
+// The menu calculator's default language is Turkish (/), Arabic and English have their own paths
+const menuUrl = computed(() => `${MENU_SITE}${loc.value === 'tr' ? '/' : `/${loc.value}/`}`)
 
 useSeoMeta({
   title: () => t('channel.title'),
@@ -135,7 +137,7 @@ useSeoMeta({
         <div class="mt-3 grid gap-8 rounded-3xl border border-caramel/30 bg-gradient-to-br from-caramel/[0.12] to-transparent p-7 md:grid-cols-[1fr_auto] md:items-center md:p-10">
           <div>
             <h2 class="text-3xl font-extrabold" dir="ltr" :class="loc === 'ar' ? 'text-end' : ''">{{ t('channel.toolsTitle') }}</h2>
-            <p class="mt-3 max-w-xl text-lg leading-relaxed text-cream/85">{{ t('channel.toolsDesc') }}</p>
+            <p class="mt-3 max-w-xl text-lg leading-relaxed text-cream/85"><BidiText :text="t('channel.toolsDesc')" /></p>
             <a :href="interviewUrl" target="_blank" rel="noopener" class="mt-6 inline-block rounded-xl bg-caramel px-6 py-3 font-bold text-ink transition hover:brightness-110">
               {{ t('channel.toolsCta') }} {{ loc === 'ar' ? '←' : '→' }}
             </a>
@@ -147,6 +149,19 @@ useSeoMeta({
             </div>
           </dl>
         </div>
+
+        <!-- Second tool: menu calorie & allergen calculator for restaurants -->
+        <a :href="menuUrl" target="_blank" rel="noopener" class="group mt-4 flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/[0.03] p-7 transition hover:border-caramel/50 sm:flex-row sm:items-center md:px-10">
+          <span class="grid size-14 shrink-0 place-items-center rounded-2xl bg-[#14532d] font-mono text-sm font-bold text-white" aria-hidden="true">kcal</span>
+          <span class="flex-1">
+            <span class="flex flex-wrap items-center gap-2">
+              <span class="text-xl font-extrabold">{{ t('channel.menuTitle') }}</span>
+              <span class="rounded-full bg-caramel/15 px-2.5 py-0.5 text-xs font-bold text-caramel">{{ t('channel.menuBadge') }}</span>
+            </span>
+            <span class="mt-1.5 block max-w-2xl leading-relaxed text-cream/80">{{ t('channel.menuDesc') }}</span>
+          </span>
+          <span class="shrink-0 font-bold text-caramel group-hover:underline">{{ t('channel.menuCta') }} {{ loc === 'ar' ? '←' : '→' }}</span>
+        </a>
       </section>
 
       <!-- About -->

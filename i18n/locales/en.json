@@ -29,7 +29,11 @@
     "aboutText": "A frontend developer. Here I share what I learn about prompts and code, in a simple way for developers and non-developers alike, and we learn together.",
     "aboutCta": "My personal page",
     "footer": "Write it right… get it right",
-    "toolsStatTracks": "tracks"
+    "toolsStatTracks": "tracks",
+    "menuTitle": "Menu calculator for restaurants",
+    "menuBadge": "Free tool",
+    "menuDesc": "For restaurants and cafés in Turkey: enter a recipe and get the ingredients, the 14 allergens and calories per portion the new menu rules require.",
+    "menuCta": "Open the calculator"
   },
   "portfolio": {
     "title": "Yaman Mando · Senior Frontend Developer",

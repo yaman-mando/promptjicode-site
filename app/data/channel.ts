@@ -11,6 +11,7 @@ export const SOCIALS = [
 
 export const REPO = 'https://github.com/promptjicode/promptjicode'
 export const INTERVIEW_SITE = 'https://interview.promptjicode.com'
+export const MENU_SITE = 'https://menu.promptjicode.com'
 
 export const HERO = {
   slogan: { ar: 'اكتبها صح… بتطلع صح', en: 'Write it right… get it right', tr: 'Doğru yaz… doğru çıksın' } as L,

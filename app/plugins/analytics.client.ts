@@ -51,6 +51,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       else if (/linkedin\.com/.test(href)) label = 'linkedin'
       else if (/github\.com/.test(href)) label = 'github'
       else if (/interview\.promptjicode\.com/.test(href)) label = 'interview'
+      else if (/menu\.promptjicode\.com/.test(href)) label = 'menu'
       else if (/instagram|tiktok|youtube|facebook/.test(href)) label = `social:${new URL(href).hostname.replace(/^www\./, '').split('.')[0]}`
       else if (el.host && el.host !== location.host) label = `project:${el.host.replace(/^www\./, '')}`
     }
