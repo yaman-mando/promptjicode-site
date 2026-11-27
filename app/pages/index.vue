@@ -169,6 +169,9 @@ useSeoMeta({
         </a>
       </section>
 
+      <!-- Web services (PromptjiWeb) -->
+      <HomeWebPromo />
+
       <!-- About -->
       <section id="about" class="py-12">
         <div class="flex flex-col gap-6 rounded-3xl border border-white/10 bg-white/[0.03] p-7 sm:flex-row sm:items-center md:p-10">

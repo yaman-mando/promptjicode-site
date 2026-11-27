@@ -31,17 +31,17 @@ export const SV_HERO = {
 
 export const SV_WHY: { icon: string, title: L, text: L }[] = [
   {
-    icon: 'M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3Zm0 0a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z',
+    icon: 'languages',
     title: { ar: 'عدة لغات، والعربية بشكل صحيح', en: 'Several languages, Arabic done right', tr: 'Çok dil, Arapça dahil' },
     text: { ar: 'موقع واحد بالعربية والتركية والإنجليزية، مع اتجاه الكتابة الصحيح للعربية. مثالي إن كان عملاؤك من أكثر من بلد.', en: 'One site in Turkish, English and Arabic, with proper right-to-left layout for Arabic. Ideal if your customers come from more than one country.', tr: 'Tek sitede Türkçe, İngilizce ve Arapça; Arapça için doğru sağdan sola düzen. Müşterileriniz farklı ülkelerden geliyorsa ideal.' },
   },
   {
-    icon: 'M12 14l4-4M4.9 19a9 9 0 1 1 14.2 0M12 5v2M5 12H3m18 0h-2M6.3 6.3l1.4 1.4',
+    icon: 'speed',
     title: { ar: 'سريع ويظهر في Google', en: 'Fast and easy to find', tr: 'Hızlı ve bulunabilir' },
     text: { ar: 'صفحات تُفتح بسرعة على أي جوال، مع إعدادات SEO الأساسية لتظهر في نتائج البحث وعلى خرائط Google.', en: 'Pages that open quickly on any phone, with basic SEO set up so you show up in search results and on Google Maps.', tr: 'Her telefonda hızlı açılan sayfalar; arama sonuçlarında ve Google Haritalar’da görünmeniz için temel SEO ayarları.' },
   },
   {
-    icon: 'M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Zm-3 9 2 2 4-4',
+    icon: 'owner',
     title: { ar: 'كل شيء باسمك', en: 'Everything is yours', tr: 'Her şey sizin adınıza' },
     text: { ar: 'الدومين والموقع مسجّلان باسمك ومن حسابك. أنا أتولى الجانب التقني، وأنت تبقى المالك دائمًا.', en: 'The domain and site are registered in your name, in your own account. I take care of the technical side; you always stay the owner.', tr: 'Domain ve site kendi hesabınızda, sizin adınıza kayıtlı. Teknik tarafı ben yönetirim, sahibi her zaman sizsiniz.' },
   },
@@ -103,6 +103,19 @@ export const SV_PACKAGES: Pkg[] = [
 
 export const SV_PKG_H = { ar: 'باقة تناسب ميزانيتك', en: 'A package for every budget', tr: 'Bütçenize uygun paketler' } as L
 
+export const SV_DEMO = { ar: 'موقع واحد بثلاث لغات، والعربية من اليمين لليسار', en: 'One site, three languages, Arabic right-to-left', tr: 'Tek site, üç dil, Arapça sağdan sola' } as L
+
+/** Teaser block on the channel home page */
+export const SV_HOME = {
+  title: { ar: 'تحتاج موقعًا لعملك؟', en: 'Need a website for your business?', tr: 'İşletmeniz için web sitesi mi lazım?' } as L,
+  text: {
+    ar: 'أصمّم مواقع سريعة لأصحاب الأعمال بالعربية والتركية والإنجليزية، مع الدومين والاستضافة. أسعار واضحة، والتسليم خلال أيام.',
+    en: 'I build fast websites for businesses in Turkish, English and Arabic, with domain and hosting included. Clear prices, delivered in days.',
+    tr: 'İşletmeler için Türkçe, İngilizce ve Arapça hızlı web siteleri hazırlıyorum; domain ve hosting dahil. Net fiyatlar, birkaç günde teslim.',
+  } as L,
+  cta: { ar: 'شاهد الباقات والأسعار', en: 'See packages and prices', tr: 'Paketleri ve fiyatları görün' } as L,
+}
+
 export const SV_CUR = {
   label: { ar: 'العملة', en: 'Currency', tr: 'Para birimi' } as L,
 }
@@ -115,25 +128,25 @@ export const SV_EXTRA_H = {
 }
 
 export const SV_EXTRA: { id: string, icon: string, title: L, text: L }[] = [
-  { id: 'google', icon: 'M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11Zm0-8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z',
+  { id: 'google', icon: 'google',
     title: { ar: 'الظهور على خرائط Google', en: 'Google Business Profile', tr: 'Google İşletme Profili' },
     text: { ar: 'إنشاء ملف نشاطك على Google وتحسينه: الصور، وساعات العمل، والتقييمات، ليظهر محلك عندما يبحث الناس بالقرب منك.', en: 'Set up and optimize your Google profile: photos, hours and reviews, so you show up when people search nearby.', tr: 'Google profilinizi kurar ve iyileştiririm: fotoğraflar, çalışma saatleri, yorumlar. Yakınınızda arayanlar sizi bulsun.' } },
-  { id: 'speed', icon: 'M13 2 4 14h7l-1 8 9-12h-7l1-8Z',
+  { id: 'speed', icon: 'seo',
     title: { ar: 'تسريع موقع حالي وتحسين SEO', en: 'Speed up an existing site + SEO', tr: 'Mevcut siteyi hızlandırma ve SEO' },
     text: { ar: 'عندك موقع بطيء أو لا يظهر في البحث؟ أفحصه وأصلح ما يؤخره، مع تحسين العناوين والوصف للبحث.', en: 'Slow site, or not showing up in search? I audit it, fix what slows it down, and improve titles and descriptions for search.', tr: 'Siteniz yavaş mı ya da aramada çıkmıyor mu? İnceler, yavaşlatan şeyleri düzeltir, başlık ve açıklamaları iyileştiririm.' } },
-  { id: 'pwa', icon: 'M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm4 16h.01',
+  { id: 'pwa', icon: 'pwa',
     title: { ar: 'تطبيق جوال من موقعك (PWA)', en: 'Turn your site into an app (PWA)', tr: 'Sitenizi uygulamaya çevirme (PWA)' },
     text: { ar: 'يثبّته زبونك على شاشة الجوال بأيقونتك، ويفتح بسرعة حتى مع إنترنت ضعيف، دون متاجر تطبيقات.', en: 'Customers install it on their home screen with your icon, and it opens fast even on a weak connection, no app store needed.', tr: 'Müşterileriniz ikonunuzla ana ekrana ekler; zayıf internette bile hızlı açılır, uygulama mağazasına gerek yok.' } },
-  { id: 'admin', icon: 'M4 5h16M4 12h16M4 19h10',
+  { id: 'admin', icon: 'admin',
     title: { ar: 'لوحة تحكم مخصصة', en: 'Custom admin dashboard', tr: 'Özel yönetim paneli' },
     text: { ar: 'لوحة لإدارة المحتوى أو الطلبات أو الحجوزات أو الزبائن، مصممة على طريقة عملك.', en: 'A dashboard to manage content, orders, bookings or customers, built around the way you work.', tr: 'İçerik, sipariş, rezervasyon ya da müşterileri yönetmek için, çalışma şeklinize göre bir panel.' } },
-  { id: 'menu', icon: 'M4 4h6v6H4V4Zm10 0h6v6h-6V4ZM4 14h6v6H4v-6Zm10 3h6m-3-3v6',
+  { id: 'menu', icon: 'menu',
     title: { ar: 'منيو رقمي للمطاعم (QR)', en: 'Digital QR menu for restaurants', tr: 'Restoranlar için QR menü' },
     text: { ar: 'منيو بعدة لغات يفتح من رمز QR على الطاولة، مع الأسعار ومسببات الحساسية، وتعدّله بنفسك.', en: 'A multilingual menu opened from a QR code on the table, with prices and allergens, which you can edit yourself.', tr: 'Masadaki QR kodla açılan çok dilli menü; fiyatlar ve alerjenlerle, kendiniz düzenleyebilirsiniz.' } },
-  { id: 'email', icon: 'M4 6h16v12H4V6Zm0 1 8 6 8-6',
+  { id: 'email', icon: 'email',
     title: { ar: 'بريد رسمي باسم عملك', en: 'Business email', tr: 'Kurumsal e-posta' },
     text: { ar: 'بريد مثل info@yourbusiness.com يمنح عملك ثقة أكبر من بريد مجاني.', en: 'An address like info@yourbusiness.com looks far more trustworthy than a free one.', tr: 'info@isletmeniz.com gibi bir adres, ücretsiz e-postadan çok daha güven verir.' } },
-  { id: 'shop', icon: 'M5 8h14l-1 12H6L5 8Zm4 0V6a3 3 0 0 1 6 0v2',
+  { id: 'shop', icon: 'shop',
     title: { ar: 'متجر إلكتروني', en: 'Online shop', tr: 'Online mağaza' },
     text: { ar: 'منتجات وسلة ودفع إلكتروني، بعرض خاص حسب حجم المتجر.', en: 'Products, cart and online payment, with a custom quote based on the size of the shop.', tr: 'Ürünler, sepet ve online ödeme; mağazanın büyüklüğüne göre özel teklif.' } },
 ]
