@@ -42,6 +42,7 @@ useSeoMeta({
           <a href="#episodes" class="hover:text-cream">{{ t('channel.nav.episodes') }}</a>
           <a href="#tools" class="hover:text-cream">{{ t('channel.nav.tools') }}</a>
           <a href="#about" class="hover:text-cream">{{ t('channel.nav.about') }}</a>
+          <NuxtLink :to="localePath('/services')" class="font-semibold text-caramel hover:text-cream">{{ t('channel.nav.services') }}</NuxtLink>
         </nav>
         <LangSwitch dark />
       </div>
@@ -186,6 +187,7 @@ useSeoMeta({
         <div class="flex gap-3">
           <a v-for="s in SOCIALS" :key="s.id" :href="s.url" target="_blank" rel="noopener" class="hover:text-cream" :aria-label="s.label"><SocialIcon :id="s.id" /></a>
         </div>
+        <NuxtLink :to="localePath('/services')" class="hover:text-cream">{{ t('channel.nav.services') }}</NuxtLink>
         <span dir="ltr">© 2026 PromptjiCode</span>
       </div>
     </footer>

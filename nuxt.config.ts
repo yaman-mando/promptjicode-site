@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     preset: 'static',
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/yaman', '/en', '/en/yaman', '/tr', '/tr/yaman'],
+      routes: ['/', '/yaman', '/services', '/en', '/en/yaman', '/en/services', '/tr', '/tr/yaman', '/tr/services'],
     },
   },
 })
