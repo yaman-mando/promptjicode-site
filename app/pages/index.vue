@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import type { Locale } from '~/data/channel'
-import { HERO, INTERVIEW_EPISODES, INTERVIEW_SITE, MENU_SITE, REELS, REPO, SERIES, SOCIALS } from '~/data/channel'
+import { GIT_EPISODES, HERO, INTERVIEW_EPISODES, INTERVIEW_SITE, MENU_SITE, REELS, REPO, SERIES, SOCIALS } from '~/data/channel'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const loc = computed(() => locale.value as Locale)
 
-const tab = ref<'reels' | 'interview'>('reels')
-const episodes = computed(() => (tab.value === 'reels' ? REELS : INTERVIEW_EPISODES))
+const tab = ref<'reels' | 'interview' | 'git'>('reels')
+const episodes = computed(() => ({ reels: REELS, interview: INTERVIEW_EPISODES, git: GIT_EPISODES })[tab.value])
 const levelClass: Record<string, string> = {
   Junior: 'bg-emerald-400/15 text-emerald-300',
   Mid: 'bg-caramel/15 text-caramel',
@@ -32,10 +32,10 @@ useSeoMeta({
   <div class="min-h-dvh bg-ink text-cream" style="background-image: radial-gradient(ellipse 1000px 650px at 50% -5%, rgba(226,161,92,.16), transparent 70%)">
     <!-- Header -->
     <header class="sticky top-0 z-20 border-b border-white/5 bg-ink/80 backdrop-blur">
-      <div class="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-5">
-        <NuxtLink :to="localePath('/')" class="flex items-center gap-2.5" dir="ltr">
+      <div class="mx-auto flex h-16 max-w-5xl items-center justify-between gap-3 px-5">
+        <NuxtLink :to="localePath('/')" class="flex shrink-0 items-center gap-2.5" dir="ltr">
           <img src="/logo.png" alt="" width="34" height="34" class="size-8.5 rounded-full">
-          <span class="text-lg font-extrabold">Promptji<span class="text-caramel">Code</span></span>
+          <span class="text-lg font-extrabold max-[430px]:hidden">Promptji<span class="text-caramel">Code</span></span>
         </NuxtLink>
         <nav class="hidden gap-6 text-sm text-sand md:flex">
           <a href="#series" class="hover:text-cream">{{ t('channel.nav.series') }}</a>
@@ -44,7 +44,10 @@ useSeoMeta({
           <a href="#about" class="hover:text-cream">{{ t('channel.nav.about') }}</a>
           <NuxtLink :to="localePath('/services')" class="font-semibold text-caramel hover:text-cream">{{ t('channel.nav.services') }}</NuxtLink>
         </nav>
-        <LangSwitch dark />
+        <div class="flex items-center gap-2">
+          <NuxtLink :to="localePath('/services')" class="rounded-lg bg-caramel/15 px-3 py-1.5 text-sm font-bold text-caramel md:hidden">{{ t('channel.nav.services') }}</NuxtLink>
+          <LangSwitch dark />
+        </div>
       </div>
     </header>
 
@@ -104,17 +107,17 @@ useSeoMeta({
         <p class="text-sm font-semibold text-caramel">{{ t('channel.episodesKicker') }}</p>
         <h2 class="mt-1 mb-6 text-3xl font-extrabold">{{ t('channel.episodesTitle') }}</h2>
 
-        <div class="mb-5 flex w-fit gap-1 rounded-xl bg-white/5 p-1" role="tablist">
+        <div class="mb-5 flex w-fit max-w-full gap-1 overflow-x-auto rounded-xl bg-white/5 p-1" role="tablist">
           <button
-            v-for="k in (['reels', 'interview'] as const)"
+            v-for="k in (['reels', 'interview', 'git'] as const)"
             :key="k"
             type="button"
             role="tab"
             :aria-selected="tab === k"
-            class="rounded-lg px-4 py-2 text-sm font-semibold transition"
+            class="shrink-0 rounded-lg px-4 py-2 text-sm font-semibold transition"
             :class="tab === k ? 'bg-caramel text-ink' : 'text-sand hover:text-cream'"
             @click="tab = k"
-          >{{ k === 'reels' ? t('channel.reelsTab') : t('channel.interviewTab') }}</button>
+          >{{ t(`channel.${k}Tab`) }}</button>
         </div>
 
         <ol class="grid gap-2">
@@ -123,6 +126,7 @@ useSeoMeta({
               <span class="font-mono text-sm text-sand">{{ e.n }}</span>
               <span class="min-w-0 flex-1 font-semibold"><BidiText :text="e.title[loc]" /></span>
               <span v-if="e.level" class="hidden shrink-0 rounded-full px-2.5 py-0.5 font-mono text-xs sm:inline" :class="levelClass[e.level]">{{ e.level }} · {{ e.topic }}</span>
+              <span v-else-if="e.topic" class="hidden shrink-0 rounded-full bg-sky-400/10 px-2.5 py-0.5 font-mono text-xs text-sky-300 sm:inline" dir="ltr">git {{ e.topic }}</span>
               <span class="shrink-0 rounded-lg bg-caramel/15 px-3 py-1 text-sm font-bold text-caramel group-hover:bg-caramel group-hover:text-ink">▶ {{ t('channel.try') }}</span>
             </a>
           </li>

@@ -21,7 +21,7 @@
     "allOnGithub": "Her bölümün promptu ve kodu GitHub’da",
     "toolsKicker": "Araçlar",
     "toolsTitle": "PromptjiCode Interview",
-    "toolsDesc": "Frontend, Backend ve Full-stack’te gerçek mülakat sorularıyla, üç seviyede ve üç dilde kendini test et ve diğerleriyle karşılaştır. Her cevabın bir açıklaması var.",
+    "toolsDesc": "Frontend, Backend ve Full-stack’te mülakat tarzı sorularla, üç seviyede ve üç dilde kendini test et ve diğerleriyle karşılaştır. Her cevabın bir açıklaması var.",
     "toolsStat1": "konu",
     "toolsStat2": "seviye",
     "toolsStat3": "dil",
@@ -34,7 +34,8 @@
     "menuTitle": "Şeffaf Menü Hesaplayıcı",
     "menuBadge": "Ücretsiz araç",
     "menuDesc": "Restoran ve kafeler için: tarifinizi girin; yeni yönetmeliğin menüde istediği içerik, 14 alerjen ve porsiyon kalorisini alın.",
-    "menuCta": "Hesaplayıcıyı aç"
+    "menuCta": "Hesaplayıcıyı aç",
+    "gitTab": "Git kurtarma"
   },
   "portfolio": {
     "title": "Yaman Mando · Kıdemli Frontend Geliştirici",

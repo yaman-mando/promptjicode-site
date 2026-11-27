@@ -21,7 +21,7 @@
     "allOnGithub": "The prompt and code for every episode are on GitHub",
     "toolsKicker": "Tools",
     "toolsTitle": "PromptjiCode Interview",
-    "toolsDesc": "Test yourself with real Frontend, Backend and Full-stack interview questions at three levels and in three languages, and see how you compare. Every answer comes with an explanation.",
+    "toolsDesc": "Test yourself with interview-style Frontend, Backend and Full-stack questions at three levels and in three languages, and see how you compare. Every answer comes with an explanation.",
     "toolsStat1": "topics",
     "toolsStat2": "levels",
     "toolsStat3": "languages",
@@ -34,7 +34,8 @@
     "menuTitle": "Menu calculator for restaurants",
     "menuBadge": "Free tool",
     "menuDesc": "For restaurants and cafés in Turkey: enter a recipe and get the ingredients, the 14 allergens and calories per portion the new menu rules require.",
-    "menuCta": "Open the calculator"
+    "menuCta": "Open the calculator",
+    "gitTab": "Git rescues"
   },
   "portfolio": {
     "title": "Yaman Mando · Senior Frontend Developer",

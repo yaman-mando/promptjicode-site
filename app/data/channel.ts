@@ -112,4 +112,12 @@ export const INTERVIEW_EPISODES: Episode[] = [
   { n: '06', level: 'Junior', topic: 'Reference', url: 'https://promptjicode.github.io/promptjicode/interview/06-reference/', title: { ar: 'عدّلت b… ليش تغيّر a؟', en: 'I changed b… why did a change?', tr: 'b’yi değiştirdim… a neden değişti?' } },
   { n: '07', level: 'Senior', topic: 'Rendering', url: 'https://promptjicode.github.io/promptjicode/interview/07-transform-vs-left/', title: { ar: 'نفس الحركة… وحدة بتتقطّع ووحدة لأ', en: 'Same animation… one stutters, one doesn’t', tr: 'Aynı animasyon… biri takılıyor, biri değil' } },
   { n: '08', level: 'Mid', topic: 'React key', url: 'https://promptjicode.github.io/promptjicode/interview/08-react-key/', title: { ar: 'حذفت سطر… والـ ✓ انتقل؟', en: 'I deleted a row… and the ✓ moved?', tr: 'Bir satır sildim… ✓ yer mi değiştirdi?' } },
+  { n: '09', level: 'Mid', topic: 'React setState', url: 'https://promptjicode.github.io/promptjicode/interview/09-setstate-batching/', title: { ar: '3 مرات +1… والعداد طلع كم؟', en: '+1 three times… so what’s the count?', tr: '3 kez +1… sayaç kaç oldu?' } },
+  { n: '10', level: 'Junior', topic: 'CSS specificity', url: 'https://promptjicode.github.io/promptjicode/interview/10-specificity/', title: { ar: 'تلات قواعد… مين بيربح؟', en: 'Three rules… which one wins?', tr: 'Üç kural… hangisi kazanır?' } },
+]
+
+export const GIT_EPISODES: Episode[] = [
+  { n: '01', topic: 'switch -c · reset --hard', url: 'https://promptjicode.github.io/promptjicode/git/01-wrong-branch/', title: { ar: 'عملت commit على main بالغلط؟', en: 'Committed to main by mistake?', tr: 'Yanlışlıkla main’e mi commit attın?' } },
+  { n: '02', topic: 'revert · push', url: 'https://promptjicode.github.io/promptjicode/git/02-revert-after-push/', title: { ar: 'عملت push… وبعدين انتبهت؟', en: 'Pushed… and then noticed?', tr: 'Push ettin… sonra mı fark ettin?' } },
+  { n: '03', topic: 'reflog', url: 'https://promptjicode.github.io/promptjicode/git/03-reflog/', title: { ar: 'عملت reset --hard… وراح شغلك؟', en: 'Ran reset --hard… and lost your work?', tr: 'reset --hard yaptın… işin mi gitti?' } },
 ]

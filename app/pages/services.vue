@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Locale } from '~/data/channel'
 import { PERSON } from '~/data/portfolio'
-import { SV_CARE, SV_END, SV_FAQ, SV_FAQ_H, SV_HERO, SV_META, SV_NAV, SV_PACKAGES, SV_PKG_H, SV_STEPS, SV_STEPS_H, SV_WHY, SV_WORK, SV_WORK_H } from '~/data/services'
+import { SV_CARE, SV_CUR, SV_END, SV_EXTRA, SV_EXTRA_H, SV_FAQ, SV_FAQ_H, SV_HERO, SV_META, SV_NAV, SV_PACKAGES, SV_PKG_H, SV_STEPS, SV_STEPS_H, SV_WHY, SV_WORK, SV_WORK_H } from '~/data/services'
 
 const { locale } = useI18n()
 const localePath = useLocalePath()
@@ -10,6 +10,8 @@ const loc = computed(() => locale.value as Locale)
 const wa = computed(() => `${PERSON.whatsapp}?text=${encodeURIComponent(SV_END.wa[loc.value])}`)
 const mailto = computed(() => `mailto:${PERSON.email}?subject=${encodeURIComponent(SV_END.title[loc.value])}`)
 const open = ref<number | null>(0)
+const { currency, set: setCurrency } = useCurrency()
+const waFor = (what: string) => `${PERSON.whatsapp}?text=${encodeURIComponent(`${SV_END.wa[loc.value]} (${what})`)}`
 
 useSeoMeta({
   title: () => SV_META.title[loc.value],
@@ -32,6 +34,7 @@ useSeoMeta({
         </a>
         <nav class="hidden gap-7 text-sm text-muted md:flex">
           <a href="#packages" class="hover:text-text">{{ SV_NAV.packages[loc] }}</a>
+          <a href="#extra" class="hover:text-text">{{ SV_NAV.extra[loc] }}</a>
           <a href="#work" class="hover:text-text">{{ SV_NAV.work[loc] }}</a>
           <a href="#faq" class="hover:text-text">{{ SV_NAV.faq[loc] }}</a>
         </nav>
@@ -74,7 +77,12 @@ useSeoMeta({
       <section id="packages" class="pt-24">
         <div v-reveal>
           <span class="kicker">{{ SV_NAV.packages[loc] }}</span>
-          <h2 class="h2">{{ SV_PKG_H[loc] }}</h2>
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <h2 class="h2">{{ SV_PKG_H[loc] }}</h2>
+            <div class="mb-10 flex items-center gap-1 rounded-xl border border-line bg-white p-1 text-sm font-bold" role="group" :aria-label="SV_CUR.label[loc]">
+              <button v-for="c in (['tl', 'usd'] as const)" :key="c" type="button" class="rounded-lg px-3.5 py-1.5 transition" :class="currency === c ? 'bg-text text-white' : 'text-muted hover:text-text'" :aria-pressed="currency === c" @click="setCurrency(c)">{{ c === 'tl' ? '₺ TL' : '$ USD' }}</button>
+            </div>
+          </div>
         </div>
         <div class="grid gap-4 md:grid-cols-3">
           <article
@@ -88,7 +96,7 @@ useSeoMeta({
             </div>
             <div>
               <span class="text-sm" :class="p.featured ? 'text-white/60' : 'text-muted'">{{ p.unit[loc] }}</span>
-              <strong class="block text-4xl font-extrabold tabular-nums" :class="[p.featured ? 'text-caramel' : 'text-text', loc === 'ar' ? '' : 'ltr font-latin']">{{ p.price[loc] }}</strong>
+              <strong class="block text-4xl font-extrabold tabular-nums" :class="[p.featured ? 'text-caramel' : 'text-text', loc === 'ar' && currency === 'tl' ? '' : 'ltr font-latin', loc === 'ar' && currency === 'usd' ? 'text-end' : '']">{{ currency === 'tl' ? p.tl[loc] : p.usd }}</strong>
             </div>
             <ul class="grid gap-2.5 text-[15px]">
               <li v-for="pt in p.points[loc]" :key="pt" class="flex gap-2.5">
@@ -97,7 +105,7 @@ useSeoMeta({
               </li>
             </ul>
             <a
-              :href="`${PERSON.whatsapp}?text=${encodeURIComponent(`${SV_END.wa[loc]} (${p.name[loc]})`)}`" target="_blank" rel="noopener"
+              :href="waFor(p.name[loc])" target="_blank" rel="noopener"
               class="mt-auto inline-flex h-11 items-center justify-center rounded-xl text-sm font-bold transition"
               :class="p.featured ? 'bg-caramel text-ink hover:brightness-110' : 'border border-line bg-paper-2 hover:border-[#d8cfc6]'"
               :data-track="`wa-${p.id}`"
@@ -107,11 +115,30 @@ useSeoMeta({
 
         <div v-reveal class="mt-4 flex flex-col gap-3 rounded-2xl border border-dashed border-[#d8cfc6] bg-paper-2 p-6 md:flex-row md:items-center md:justify-between">
           <div class="flex flex-col gap-1">
-            <b class="flex flex-wrap items-baseline gap-x-3">{{ SV_CARE.title[loc] }} <span class="font-bold text-caramel-dark" :class="loc === 'ar' ? '' : 'ltr font-latin'">{{ SV_CARE.price[loc] }}</span></b>
+            <b class="flex flex-wrap items-baseline gap-x-3">{{ SV_CARE.title[loc] }} <span class="font-bold text-caramel-dark" :class="loc === 'ar' ? '' : 'ltr font-latin'">{{ currency === 'tl' ? SV_CARE.tl[loc] : SV_CARE.usd[loc] }}</span></b>
             <p class="text-[15px] leading-relaxed text-[#4a3f36]">{{ SV_CARE.text[loc] }}</p>
           </div>
         </div>
         <p v-reveal class="mt-4 text-[15px] text-muted">{{ SV_CARE.custom[loc] }}</p>
+      </section>
+
+      <!-- Extra services -->
+      <section id="extra" class="pt-24">
+        <div v-reveal>
+          <span class="kicker">{{ SV_EXTRA_H.kicker[loc] }}</span>
+          <h2 class="h2 !mb-3">{{ SV_EXTRA_H.title[loc] }}</h2>
+          <p class="mb-10 text-[15px] text-muted">{{ SV_EXTRA_H.note[loc] }}</p>
+        </div>
+        <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <a v-for="(x, i) in SV_EXTRA" :key="x.id" v-reveal="(i % 4) * 60" :href="waFor(x.title[loc])" target="_blank" rel="noopener" class="card group flex flex-col gap-2.5 p-5 transition hover:-translate-y-0.5 hover:border-[#d8cfc6]" :data-track="`wa-extra-${x.id}`">
+            <span class="grid size-10 place-items-center rounded-xl bg-caramel/15 text-caramel-dark">
+              <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path :d="x.icon" /></svg>
+            </span>
+            <h3 class="font-bold leading-snug"><BidiText plain :text="x.title[loc]" /></h3>
+            <p class="text-[14.5px] leading-relaxed text-[#4a3f36]"><BidiText plain :text="x.text[loc]" /></p>
+            <span class="mt-auto pt-1 text-sm font-bold text-caramel-dark group-hover:underline">{{ SV_EXTRA_H.ask[loc] }}</span>
+          </a>
+        </div>
       </section>
 
       <!-- Work -->

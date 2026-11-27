@@ -12,6 +12,7 @@ export const SV_META = {
 export const SV_NAV = {
   packages: { ar: 'الباقات', en: 'Packages', tr: 'Paketler' } as L,
   work: { ar: 'أعمال سابقة', en: 'Work', tr: 'İşler' } as L,
+  extra: { ar: 'خدمات إضافية', en: 'Extras', tr: 'Ek hizmetler' } as L,
   faq: { ar: 'أسئلة شائعة', en: 'FAQ', tr: 'SSS' } as L,
 }
 
@@ -50,7 +51,8 @@ export interface Pkg {
   id: string
   name: L
   for: L
-  price: L
+  tl: L
+  usd: string
   unit: L
   points: L<string[]>
   featured?: boolean
@@ -61,7 +63,8 @@ export const SV_PACKAGES: Pkg[] = [
     id: 'one',
     name: { ar: 'صفحة واحدة', en: 'One page', tr: 'Tek sayfa' },
     for: { ar: 'لمحل أو خدمة تحتاج حضورًا بسيطًا وواضحًا', en: 'For a shop or service that needs a simple, clear presence', tr: 'Basit ve net bir tanıtım isteyen dükkân ve hizmetler için' },
-    price: { ar: '9,999 ليرة', en: '$199', tr: '9.999 TL' },
+    tl: { ar: '9,999 ليرة', en: '9,999 TL', tr: '9.999 TL' },
+    usd: '$199',
     unit: { ar: 'تبدأ من', en: 'From', tr: 'Başlangıç' },
     points: {
       ar: ['صفحة تعريفية واحدة بلغة واحدة', 'زر واتساب، وخريطة، ونموذج تواصل', 'متوافق مع الجوال', 'دومين واستضافة لأول سنة', 'التسليم خلال 3 أيام'],
@@ -73,34 +76,75 @@ export const SV_PACKAGES: Pkg[] = [
     id: 'site',
     name: { ar: 'موقع تعريفي', en: 'Business site', tr: 'Kurumsal site' },
     for: { ar: 'لشركة تريد عرض خدماتها وأعمالها بالتفصيل', en: 'For a business that wants to present its services and work in detail', tr: 'Hizmetlerini ve işlerini detaylı anlatmak isteyen işletmeler için' },
-    price: { ar: '17,999 ليرة', en: '$359', tr: '17.999 TL' },
+    tl: { ar: '17,999 ليرة', en: '17,999 TL', tr: '17.999 TL' },
+    usd: '$359',
     unit: { ar: 'تبدأ من', en: 'From', tr: 'Başlangıç' },
     featured: true,
     points: {
-      ar: ['حتى 6 صفحات بلغتين', 'معرض أعمال أو منتجات', 'إعدادات SEO وخرائط Google', 'دومين واستضافة لأول سنة', 'التسليم خلال أسبوع'],
-      en: ['Up to 6 pages in two languages', 'Work or product gallery', 'SEO and Google Maps setup', 'Domain and hosting for the first year', 'Delivered within a week'],
-      tr: ['İki dilde 6 sayfaya kadar', 'İş veya ürün galerisi', 'SEO ve Google Haritalar ayarları', 'İlk yıl domain ve hosting', 'Bir hafta içinde teslim'],
+      ar: ['حتى 6 صفحات بلغتين', 'لوحة تحكم لتعديل النصوص والصور بنفسك', 'معرض أعمال أو منتجات', 'إعدادات SEO وخرائط Google', 'دومين واستضافة لأول سنة', 'التسليم خلال أسبوع'],
+      en: ['Up to 6 pages in two languages', 'Content panel to edit texts and photos yourself', 'Work or product gallery', 'SEO and Google Maps setup', 'Domain and hosting for the first year', 'Delivered within a week'],
+      tr: ['İki dilde 6 sayfaya kadar', 'Metin ve fotoğrafları kendiniz düzenleyeceğiniz panel', 'İş veya ürün galerisi', 'SEO ve Google Haritalar ayarları', 'İlk yıl domain ve hosting', 'Bir hafta içinde teslim'],
     },
   },
   {
     id: 'multi',
     name: { ar: 'موقع بثلاث لغات', en: 'Three-language site', tr: 'Üç dilli site' },
     for: { ar: 'لمن يخدم عملاء أتراكًا وعربًا وأجانب', en: 'For businesses serving Turkish, Arab and international customers', tr: 'Türk, Arap ve yabancı müşterilere hitap edenler için' },
-    price: { ar: '24,999 ليرة', en: '$499', tr: '24.999 TL' },
+    tl: { ar: '24,999 ليرة', en: '24,999 TL', tr: '24.999 TL' },
+    usd: '$499',
     unit: { ar: 'تبدأ من', en: 'From', tr: 'Başlangıç' },
     points: {
-      ar: ['التركية والإنجليزية والعربية', 'تصميم عربي صحيح من اليمين لليسار', 'SEO لكل لغة', 'دومين واستضافة لأول سنة', 'التسليم خلال أسبوع'],
-      en: ['Turkish, English and Arabic', 'Proper right-to-left Arabic design', 'SEO for each language', 'Domain and hosting for the first year', 'Delivered within a week'],
-      tr: ['Türkçe, İngilizce ve Arapça', 'Doğru sağdan sola Arapça tasarım', 'Her dil için SEO', 'İlk yıl domain ve hosting', 'Bir hafta içinde teslim'],
+      ar: ['التركية والإنجليزية والعربية', 'تصميم عربي صحيح من اليمين لليسار', 'لوحة تحكم بالمحتوى', 'يُثبَّت على الجوال كتطبيق (PWA)', 'SEO لكل لغة', 'دومين واستضافة لأول سنة', 'التسليم خلال أسبوع'],
+      en: ['Turkish, English and Arabic', 'Proper right-to-left Arabic design', 'Content management panel', 'Installs on phones like an app (PWA)', 'SEO for each language', 'Domain and hosting for the first year', 'Delivered within a week'],
+      tr: ['Türkçe, İngilizce ve Arapça', 'Doğru sağdan sola Arapça tasarım', 'İçerik yönetim paneli', 'Telefona uygulama gibi kurulur (PWA)', 'Her dil için SEO', 'İlk yıl domain ve hosting', 'Bir hafta içinde teslim'],
     },
   },
 ]
 
 export const SV_PKG_H = { ar: 'باقة تناسب ميزانيتك', en: 'A package for every budget', tr: 'Bütçenize uygun paketler' } as L
 
+export const SV_CUR = {
+  label: { ar: 'العملة', en: 'Currency', tr: 'Para birimi' } as L,
+}
+
+export const SV_EXTRA_H = {
+  kicker: { ar: 'خدمات إضافية', en: 'Extra services', tr: 'Ek hizmetler' } as L,
+  title: { ar: 'كل ما يحتاجه عملك ليظهر على الإنترنت', en: 'Everything your business needs to be found online', tr: 'İşletmenizin internette görünmesi için gereken her şey' } as L,
+  note: { ar: 'تُضاف إلى أي باقة أو تُطلب وحدها. اكتب لي وأرسل لك السعر.', en: 'Add them to any package or order them on their own. Message me for a price.', tr: 'Herhangi bir pakete eklenebilir ya da tek başına alınabilir. Fiyat için yazın.' } as L,
+  ask: { ar: 'اسأل عن السعر', en: 'Ask for a price', tr: 'Fiyat sorun' } as L,
+}
+
+export const SV_EXTRA: { id: string, icon: string, title: L, text: L }[] = [
+  { id: 'google', icon: 'M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11Zm0-8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z',
+    title: { ar: 'الظهور على خرائط Google', en: 'Google Business Profile', tr: 'Google İşletme Profili' },
+    text: { ar: 'إنشاء ملف نشاطك على Google وتحسينه: الصور، وساعات العمل، والتقييمات، ليظهر محلك عندما يبحث الناس بالقرب منك.', en: 'Set up and optimize your Google profile: photos, hours and reviews, so you show up when people search nearby.', tr: 'Google profilinizi kurar ve iyileştiririm: fotoğraflar, çalışma saatleri, yorumlar. Yakınınızda arayanlar sizi bulsun.' } },
+  { id: 'meta', icon: 'M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm5 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm5.5-1.5h.01',
+    title: { ar: 'تحسين الظهور على فيسبوك وإنستغرام', en: 'Facebook & Instagram setup', tr: 'Facebook ve Instagram düzeni' },
+    text: { ar: 'تجهيز صفحة العمل وربطها بالموقع وواتساب، وتركيب Meta Pixel لتعرف من أين يأتي زبائنك وتقيس إعلاناتك.', en: 'Business page setup linked to your site and WhatsApp, plus the Meta Pixel so you can measure where customers and ads come from.', tr: 'İşletme sayfasını sitenize ve WhatsApp’a bağlar, reklamlarınızı ölçmek için Meta Pixel kurarım.' } },
+  { id: 'speed', icon: 'M13 2 4 14h7l-1 8 9-12h-7l1-8Z',
+    title: { ar: 'تسريع موقع حالي وتحسين SEO', en: 'Speed up an existing site + SEO', tr: 'Mevcut siteyi hızlandırma ve SEO' },
+    text: { ar: 'عندك موقع بطيء أو لا يظهر في البحث؟ أفحصه وأصلح ما يؤخره، مع تحسين العناوين والوصف للبحث.', en: 'Slow site, or not showing up in search? I audit it, fix what slows it down, and improve titles and descriptions for search.', tr: 'Siteniz yavaş mı ya da aramada çıkmıyor mu? İnceler, yavaşlatan şeyleri düzeltir, başlık ve açıklamaları iyileştiririm.' } },
+  { id: 'pwa', icon: 'M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm4 16h.01',
+    title: { ar: 'تطبيق جوال من موقعك (PWA)', en: 'Turn your site into an app (PWA)', tr: 'Sitenizi uygulamaya çevirme (PWA)' },
+    text: { ar: 'يثبّته زبونك على شاشة الجوال بأيقونتك، ويفتح بسرعة حتى مع إنترنت ضعيف، دون متاجر تطبيقات.', en: 'Customers install it on their home screen with your icon, and it opens fast even on a weak connection, no app store needed.', tr: 'Müşterileriniz ikonunuzla ana ekrana ekler; zayıf internette bile hızlı açılır, uygulama mağazasına gerek yok.' } },
+  { id: 'admin', icon: 'M4 5h16M4 12h16M4 19h10',
+    title: { ar: 'لوحة تحكم مخصصة', en: 'Custom admin dashboard', tr: 'Özel yönetim paneli' },
+    text: { ar: 'لوحة لإدارة المحتوى أو الطلبات أو الحجوزات أو الزبائن، مصممة على طريقة عملك.', en: 'A dashboard to manage content, orders, bookings or customers, built around the way you work.', tr: 'İçerik, sipariş, rezervasyon ya da müşterileri yönetmek için, çalışma şeklinize göre bir panel.' } },
+  { id: 'menu', icon: 'M4 4h6v6H4V4Zm10 0h6v6h-6V4ZM4 14h6v6H4v-6Zm10 3h6m-3-3v6',
+    title: { ar: 'منيو رقمي للمطاعم (QR)', en: 'Digital QR menu for restaurants', tr: 'Restoranlar için QR menü' },
+    text: { ar: 'منيو بعدة لغات يفتح من رمز QR على الطاولة، مع الأسعار ومسببات الحساسية، وتعدّله بنفسك.', en: 'A multilingual menu opened from a QR code on the table, with prices and allergens, which you can edit yourself.', tr: 'Masadaki QR kodla açılan çok dilli menü; fiyatlar ve alerjenlerle, kendiniz düzenleyebilirsiniz.' } },
+  { id: 'email', icon: 'M4 6h16v12H4V6Zm0 1 8 6 8-6',
+    title: { ar: 'بريد رسمي باسم عملك', en: 'Business email', tr: 'Kurumsal e-posta' },
+    text: { ar: 'بريد مثل info@yourbusiness.com يمنح عملك ثقة أكبر من بريد مجاني.', en: 'An address like info@yourbusiness.com looks far more trustworthy than a free one.', tr: 'info@isletmeniz.com gibi bir adres, ücretsiz e-postadan çok daha güven verir.' } },
+  { id: 'shop', icon: 'M5 8h14l-1 12H6L5 8Zm4 0V6a3 3 0 0 1 6 0v2',
+    title: { ar: 'متجر إلكتروني', en: 'Online shop', tr: 'Online mağaza' },
+    text: { ar: 'منتجات وسلة ودفع إلكتروني، بعرض خاص حسب حجم المتجر.', en: 'Products, cart and online payment, with a custom quote based on the size of the shop.', tr: 'Ürünler, sepet ve online ödeme; mağazanın büyüklüğüne göre özel teklif.' } },
+]
+
 export const SV_CARE = {
   title: { ar: 'الاشتراك السنوي', en: 'Yearly care plan', tr: 'Yıllık bakım' } as L,
-  price: { ar: '2,999 ليرة سنويًا', en: '$59 / year', tr: '2.999 TL / yıl' } as L,
+  tl: { ar: '2,999 ليرة سنويًا', en: '2,999 TL / year', tr: '2.999 TL / yıl' } as L,
+  usd: { ar: '59 دولارًا سنويًا', en: '$59 / year', tr: '$59 / yıl' } as L,
   text: {
     ar: 'من السنة الثانية: تجديد الدومين والاستضافة، ومتابعة عمل الموقع، وتعديلات بسيطة على النصوص والصور.',
     en: 'From the second year: domain and hosting renewal, keeping the site running, and small text and photo updates.',
@@ -163,7 +207,7 @@ export const SV_FAQ: { q: L, a: L }[] = [
   { q: { ar: 'من يملك الدومين والموقع؟', en: 'Who owns the domain and the site?', tr: 'Domain ve site kimin olur?' }, a: { ar: 'أنت. يُسجَّل الدومين باسمك ومن حسابك، وأنا أعمل عليه بصلاحية منك فقط.', en: 'You do. The domain is registered in your name and account; I only work on it with your access.', tr: 'Sizin. Domain sizin adınıza, kendi hesabınızda kayıtlı olur; ben sadece verdiğiniz yetkiyle çalışırım.' } },
   { q: { ar: 'لا أملك نصوصًا أو صورًا جاهزة، هل هذه مشكلة؟', en: 'I don’t have texts or photos ready. Is that a problem?', tr: 'Hazır metin ya da fotoğrafım yok, sorun olur mu?' }, a: { ar: 'لا. أساعدك في كتابة النصوص، ونستخدم صورًا مناسبة حتى تجهز صورك.', en: 'No. I help you write the texts, and we use suitable photos until yours are ready.', tr: 'Hayır. Metinleri yazmanıza yardım ederim; fotoğraflarınız hazır olana kadar uygun görseller kullanırız.' } },
   { q: { ar: 'هل يمكنني تعديل الموقع لاحقًا؟', en: 'Can I change things later?', tr: 'Sonradan değişiklik yapabilir miyim?' }, a: { ar: 'نعم. التعديلات البسيطة مشمولة في الاشتراك السنوي، والإضافات الأكبر بعرض منفصل.', en: 'Yes. Small updates are included in the yearly care plan; bigger additions are quoted separately.', tr: 'Evet. Küçük güncellemeler yıllık bakıma dahil, büyük eklemeler ayrıca fiyatlandırılır.' } },
-  { q: { ar: 'كيف يكون الدفع؟', en: 'How does payment work?', tr: 'Ödeme nasıl oluyor?' }, a: { ar: 'نصف المبلغ عند البدء، والنصف الآخر عند النشر.', en: 'Half when we start, and the other half when the site goes live.', tr: 'Yarısı başlarken, kalan yarısı site yayına alındığında.' } },
+  { q: { ar: 'كيف يكون الدفع؟', en: 'How does payment work?', tr: 'Ödeme nasıl oluyor?' }, a: { ar: '30% عند البدء، والباقي عند التسليم.', en: '30% when we start, and the rest on delivery.', tr: 'Başlarken %30, kalanı teslimde.' } },
 ]
 
 export const SV_END = {
