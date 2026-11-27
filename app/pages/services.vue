@@ -21,6 +21,7 @@ useSeoMeta({
   ogImage: () => `https://promptjicode.com${SV_WORK[2]!.image[loc.value]}`,
   themeColor: '#ffffff',
 })
+useHead({ link: [{ rel: 'icon', type: 'image/svg+xml', href: '/img/promptjiweb-mark.svg' }] })
 </script>
 
 <template>
@@ -28,9 +29,9 @@ useSeoMeta({
     <!-- Nav -->
     <header class="sticky top-0 z-20 border-b border-line/80 bg-white/85 backdrop-blur-md">
       <div class="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-5">
-        <a href="#top" class="flex items-center gap-2.5">
-          <span class="grid size-8 place-items-center rounded-lg bg-text font-latin text-xs font-bold text-white" dir="ltr">YM</span>
-          <b class="font-bold">{{ PERSON.name[loc] }}</b>
+        <a href="#top" class="flex items-center gap-2" dir="ltr" aria-label="PromptjiWeb">
+          <img src="/img/promptjiweb-mark.svg" alt="" width="34" height="34" class="size-8.5">
+          <b class="font-latin text-lg font-extrabold">Promptji<span class="text-caramel-dark">Web</span></b>
         </a>
         <nav class="hidden gap-7 text-sm text-muted md:flex">
           <a href="#packages" class="hover:text-text">{{ SV_NAV.packages[loc] }}</a>
@@ -209,7 +210,7 @@ useSeoMeta({
 
     <footer class="border-t border-line py-7">
       <div class="mx-auto flex max-w-5xl flex-wrap justify-between gap-4 px-5 text-[13px] text-muted">
-        <span>© 2026 {{ PERSON.name[loc] }}</span>
+        <span><span dir="ltr">© 2026 PromptjiWeb</span> · {{ SV_END.by[loc] }}: <NuxtLink :to="localePath('/yaman')" class="font-semibold text-text hover:underline">{{ PERSON.name[loc] }}</NuxtLink></span>
         <NuxtLink :to="localePath('/')" class="hover:text-text" dir="ltr">promptjicode.com</NuxtLink>
       </div>
     </footer>

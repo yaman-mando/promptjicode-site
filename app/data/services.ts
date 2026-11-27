@@ -5,7 +5,7 @@ type L<T = string> = Record<Locale, T>
 /** Content of the /services page (offers for small businesses). Prices are "starting from". */
 
 export const SV_META = {
-  title: { ar: 'تصميم مواقع لعملك بالعربية والتركية والإنجليزية · يمان مندو', en: 'Websites for your business in English, Turkish and Arabic · Yaman Mando', tr: 'İşletmeniz için Türkçe, İngilizce ve Arapça web sitesi · Yaman Mando' } as L,
+  title: { ar: 'PromptjiWeb · تصميم مواقع لعملك بالعربية والتركية والإنجليزية', en: 'PromptjiWeb · Websites for your business in English, Turkish and Arabic', tr: 'PromptjiWeb · İşletmeniz için Türkçe, İngilizce ve Arapça web sitesi' } as L,
   desc: { ar: 'مواقع سريعة ومتوافقة مع الجوال، بلغة واحدة أو بعدة لغات، مع الدومين والاستضافة. أسعار واضحة وتسليم سريع.', en: 'Fast, mobile-friendly websites in one or several languages, with domain and hosting included. Clear prices and quick delivery.', tr: 'Tek dilde ya da çok dilde, telefonda düzgün görünen hızlı web siteleri. Domain ve hosting dahil, net fiyatlar ve hızlı teslim.' } as L,
 }
 
@@ -212,5 +212,5 @@ export const SV_END = {
   text: { ar: 'اكتب لي عن عملك في رسالة قصيرة، وأرسل لك عرضًا واضحًا خلال يوم.', en: 'Send me a short message about your business, and I’ll get back with a clear offer within a day.', tr: 'İşinizi kısa bir mesajla anlatın, bir gün içinde size net bir teklifle döneyim.' } as L,
   wa: { ar: 'مرحبًا يمان، أريد موقعًا لعملي.', en: 'Hi Yaman, I’d like a website for my business.', tr: 'Merhaba Yaman, işletmem için bir web sitesi istiyorum.' } as L,
   email: { ar: 'أو راسلني بالبريد', en: 'or email me', tr: 'ya da e-posta gönderin' } as L,
-  about: { ar: 'من أنا؟', en: 'About me', tr: 'Ben kimim?' } as L,
+  by: { ar: 'تصميم وتطوير', en: 'Designed & built by', tr: 'Tasarım ve geliştirme' } as L,
 }
