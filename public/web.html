@@ -14,6 +14,7 @@
     for (var i = 0; i < langs.length; i++) {
       if (langs[i].indexOf('tr') === 0) { to = '/tr/services'; break }
       if (langs[i].indexOf('ar') === 0) { to = '/services'; break }
+      if (langs[i].indexOf('en') === 0) { to = '/en/services'; break }
     }
     location.replace(to + location.search)
   })()
